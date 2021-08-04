@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="styles.css">
+    <title>dylan</title>
+  </head>
+  <body style="background-color: slategrey; align-self: center; cursor: crosshair;">
+    <div class="section-container">
+      <br>
+      <div class="border-div">
+        <div class="title">
+          <h1> dYlan </h1>
+          <span>software engineer</span>
+          <br></br>
+          <div style="flex-flow: row wrap">
+            <button id="who" class="border-gradient border-gradient-purple" onclick="add('who')">W H O</button>
+            <button id="what" class="border-gradient border-gradient-purple" onclick="add('what')">W H A T</button>
+            <button id="where" class="border-gradient border-gradient-purple" onclick="add('where')">W H E R E</button>
+            <button id="when" class="border-gradient border-gradient-purple" onclick="add('when')">W H E N</button>
+            <button id="why" class="border-gradient border-gradient-purple" onclick="add('why')">W H Y</button>
+            <button id="how" class="border-gradient border-gradient-purple" onclick="add('how')">H O W</button>
+          </div>
+          <br></br>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div id="whod" style="display: none;" class="section-container">
+      <h2 style="font-family: " class="title"> who </h2>
+        <p>
+          hello. <span id="git">here is the link to my <a href="https://www.github.com/DevilBoy007" title="it's not a virus i promise xD">github</a> :)</span>
+          <br>
+          my name is <span class="tooltip">Dylan Bakr.<span class="tooltiptext">{
+            <br>
+            name:&emsp;<span style="color: #0bf800">dylan</span><br>
+            age:&emsp;<span style="color: #0bf800">22</span><br>
+            role: <span style="color: #0bf800">software engineer</span><br>
+          }</span></span> <span></span>
+        </p>
+        <select onchange="update(this.value)">
+          <option value="email">email</option>
+          <option value="text">text</option>
+          <option value="mail">mail</option>
+        </select> : <a id="contact" href="mailto:dylanbakr@gmail.com">dylanbakr@gmail.com</a>
+    </div>
+    <br>
+
+    <div id="whatd" style="display: none;" class="section-container">
+      <h2 class="title"> what </h2>
+    </div>
+    <br>
+
+    <div id="whered" style="display: none;" class="section-container">
+      <h2 class="title"> where </h2>
+    </div>
+    <br>
+    <div id="whend" style="display: none;" class="section-container">
+      <h2 class="title"> when </h2>
+    </div>
+    <br>
+    <div id="whyd" style="display: none;" class="section-container">
+      <h2 class="title"> why </h2>
+    </div>
+    <br>
+    <div id="howd" style="display: none;" class="section-container">
+      <h2 class="title"> how </h2>
+    </div>
+  </body>
+</html>

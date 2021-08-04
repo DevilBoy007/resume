@@ -1,4 +1,27 @@
 var options = [false,false,false,false,false,false]
+var contactInfo = {email: 'dylanbakr@gmail.com', text:'(815) 993-8931', mail:'425 W Hampton Drive'}
+
+function update(selected){
+  switch (selected)
+  {
+    case 'email':
+      console.log('email');
+      document.getElementById("contact").href = `"mailto:${contactInfo.email}"`;
+      document.getElementById("contact").innerHTML = contactInfo.email;
+      break;
+    case 'text':
+      console.log('text');
+      document.getElementById("contact").href = `"tel:${contactInfo.text}"`;
+      document.getElementById("contact").innerHTML = contactInfo.text;
+      break;
+    case 'mail':
+      console.log('mail');
+      document.getElementById("contact").href = "https://goo.gl/maps/bTkq7kuiwpWBuZMx6";
+      document.getElementById("contact").innerHTML = contactInfo.mail;
+      break;
+    default:
+  }
+}
 
 function add(pane) {
   switch (pane) {

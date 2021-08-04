@@ -16,12 +16,45 @@ span
 {
   color: gainsboro
 }
+select
+{
+  color: deepskyblue;
+  margin-left: 5%;
+  background-color: rgba(0,0,0,.15);
+  font-size: 12px;
+}
 p
 {
   padding-left: 5%;
   font-size: 24px;
   color: deepskyblue;
 }
+#git
+{
+  padding-left: 50%;
+  font-size: 18px;
+}
+a:hover
+{
+  text-decoration: underline;
+}
+#contact
+{
+  padding-left: 5%;
+  color: #0bf800;
+  text-decoration: none;
+  font-size:15px
+}
+#contact:hover
+{
+  text-decoration: underline;
+}
+p span a
+{
+  color: #0bf800;
+  text-decoration: none;
+}
+
 button
 {
   font-family: Quicksand, sans-serif;
@@ -34,7 +67,6 @@ button
 }
 button:hover
 {
-  cursor: crosshair;
   padding: .5rem 1rem;
   color: orchid;
   text-shadow: .5px .5px black;
@@ -67,7 +99,7 @@ button:hover
   margin: auto;
   padding: 3vh;
   padding-top: 0;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.75);
   background-color: #303030
 }
 .border-div
@@ -88,3 +120,34 @@ button:hover
   align-self: center;
   text-align: center
 }
+
+/* tooltip stuff */
+.tooltip {
+  color: orange;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: rgba(0,0,0,.33);
+  color: #fff;
+  font-family: "courier new", sans-serif;
+  text-align:left;
+  border-radius: 6px;
+  padding: 5px 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+  box-shadow: 0 1px 2px 0 rgba(255,255,255,.75)
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* end tooltip stuff */
