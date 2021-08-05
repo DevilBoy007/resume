@@ -23,7 +23,7 @@ select
   background-color: rgba(0,0,0,.15);
   font-size: 12px;
 }
-p
+#whop
 {
   padding-left: 5%;
   font-size: 24px;
@@ -49,12 +49,16 @@ a:hover
 {
   text-decoration: underline;
 }
-p span a
+#whop span a
 {
   color: #0bf800;
   text-decoration: none;
 }
-
+#whyp
+{
+  text-align: justify;
+  padding: 1vh;
+}
 button
 {
   font-family: Quicksand, sans-serif;
@@ -88,6 +92,19 @@ button:hover
 .border-gradient-purple {
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
+.mini-section-container
+{
+  font-family: Quicksand, sans-serif;
+  color: deepskyblue;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  border-radius: 15px;
+  width: fit-content;
+  margin: auto;
+  padding: 2vh;
+  background-color: #303030
+}
 .section-container
 {
   font-family: Quicksand, sans-serif;
@@ -102,8 +119,24 @@ button:hover
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.75);
   background-color: #303030
 }
+.baby-border-div
+{
+  margin: 2vh;
+  border-radius: 12px;
+  background: rgb(111,8,171);
+  background: linear-gradient(300deg, rgba(111,8,171,0.93) 0%, rgba(19,255,248,1) 33%, rgba(244,141,126,1) 66%, rgba(0,212,255,1) 99%);
+  padding: 2px;
+}
+.baby-border-div>div
+{
+  padding: 6px;
+  border-radius: 12px;
+  background: #303030
+}
+
 .border-div
 {
+  margin-top, margin-bottom: 1vh;
   border-radius: 12px;
   background: rgb(111,8,171);
   background: linear-gradient(300deg, rgba(111,8,171,0.93) 0%, rgba(19,255,248,1) 33%, rgba(244,141,126,1) 66%, rgba(0,212,255,1) 99%);
@@ -111,6 +144,7 @@ button:hover
 }
 .border-div>div
 {
+  padding: 6px;
   border-radius: 12px;
   background: #303030
 }
@@ -123,7 +157,7 @@ button:hover
 
 /* tooltip stuff */
 .tooltip {
-  color: orange;
+  color: black;
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
@@ -135,6 +169,7 @@ button:hover
   background-color: rgba(0,0,0,.66);
   color: #fff;
   font-family: "courier new", sans-serif;
+  font-size: 12px;
   text-align:left;
   border-radius: 6px;
   padding: 5px 10px;

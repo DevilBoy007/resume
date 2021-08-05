@@ -14,7 +14,7 @@
           <h1> dYlan </h1>
           <span>software engineer</span>
           <br></br>
-          <div style="flex-flow: row wrap">
+          <div style="flex-flow: row wrap;">
             <button id="who" class="border-gradient border-gradient-purple" onclick="add('who')">W H O</button>
             <button id="what" class="border-gradient border-gradient-purple" onclick="add('what')">W H A T</button>
             <button id="where" class="border-gradient border-gradient-purple" onclick="add('where')">W H E R E</button>
@@ -27,24 +27,30 @@
       </div>
     </div>
     <br>
-    <div id="whod" style="display: none;" class="section-container">
-      <h2 class="title"> who </h2>
-        <p>
-          hello. <span id="git">here is the link to my <a href="https://www.github.com/DevilBoy007" title="it's not a virus i promise xD">github</a> :)</span>
-          <br>
-          my name is <span class="tooltip">Dylan Bakr.<span class="tooltiptext">{
-            <br>
-            name:&emsp;<span style="color: #0bf800">dylan</span><br>
-            age:&emsp;<span style="color: #0bf800">22</span><br>
-            role: <span style="color: #0bf800">software engineer</span><br>
-          }</span></span> <span></span>
-        </p>
-        <select onchange="update(this.value)">
-          <option value="email">email</option>
-          <option value="text">text</option>
-          <option value="mail">mail</option>
-        </select> : <a id="contact" href="mailto:dylanbakr@gmail.com">dylanbakr@gmail.com</a>
-    </div>
+      <div id="whod" style="display: none;" class="section-container">
+        <h2 class="title"> who </h2>
+        <br></br>
+        <div class="border-div">
+          <div>
+            <p id="whop">
+              hello. <span id="git">here is the link to my <a href="https://www.github.com/DevilBoy007" title="it's not a virus i promise xD">github</a> :)</span>
+              <br>
+              my name is <span class="tooltip">Dylan Bakr.<span class="tooltiptext">{
+                <br>
+                name:&emsp;<span style="color: #0bf800"> 'dylan'</span><br>
+                age:&emsp;<span style="color: #0bf800">22</span><br>
+                height:&emsp;<span style="color: #0bf800">6'0"</span><br>
+                likes:&emsp;<span style="color: #0bf800"> 'making things happen'</span><br>
+              }</span></span> <span></span>
+            </p>
+            <select onchange="update(this.value)">
+              <option value="email">email</option>
+              <option value="text">text</option>
+              <option value="mail">mail</option>
+            </select> : <a id="contact" href="mailto:dylanbakr@gmail.com">dylanbakr@gmail.com</a>
+          </div>
+        </div>
+      </div>
     <br>
 
     <div id="whatd" style="display: none;" class="section-container">
@@ -54,6 +60,34 @@
 
     <div id="whered" style="display: none;" class="section-container">
       <h2 class="title"> where </h2>
+      <br></br>
+      <div style="display: flex; flex-flow: row wrap; justify-content: space-around; margin: auto; max-width: 80%">
+        <div class="baby-border-div">
+          <div class="mini-section-container">
+            <span style="color: orchid; font-weight: bold;">orignally from:</span>LaSalle, Illinois USA
+          </div>
+        </div>
+        <div class="baby-border-div">
+          <div class="mini-section-container">
+            <span style="color: orchid; font-weight: bold;">currently located:</span>Indianapolis, Indiana USA
+          </div>
+        </div>
+        <div class="baby-border-div">
+          <div class="mini-section-container" style="text-align: right;">
+            <span style="color: orchid; font-weight: bold;">willing to relocate?</span>y e s
+          </div>
+        </div>
+        <div class="baby-border-div">
+          <div class="mini-section-container">
+            <span style="color: orchid; font-weight: bold;">current employment:</span>Milliman, Indianapolis, IN USA
+          </div>
+        </div>
+        <div class="baby-border-div">
+          <div class="mini-section-container">
+            <span style="color: orchid; font-weight: bold;">college:</span>Butler University, Indianapolis, IN USA
+          </div>
+        </div>
+      </div>
     </div>
     <br>
     <div id="whend" style="display: none;" class="section-container">
@@ -62,6 +96,14 @@
     <br>
     <div id="whyd" style="display: none;" class="section-container">
       <h2 class="title"> why </h2>
+      <br></br>
+      <div class="border-div" style="max-width: 30%">
+        <div>
+          <p id="whyp">
+          i have always had a passion for writing code;<br>creating software is a beautiful process that looks different for virtually everyone;<br>yet each person holds the same power to create amazing tools that can make a world of difference for people globally, instantly.
+        </p>
+        </div>
+      </div>
     </div>
     <br>
     <div id="howd" style="display: none;" class="section-container">
