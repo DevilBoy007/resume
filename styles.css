@@ -18,35 +18,25 @@ span
 }
 select
 {
-  color: deepskyblue;
+  color: orchid;
   margin-left: 5%;
   background-color: rgba(0,0,0,.15);
   font-size: 12px;
-}
-#whop
-{
-  padding-left: 5%;
-  font-size: 24px;
-  color: deepskyblue;
-}
-#whop span a
-{
-  color: #0bf800;
-  text-decoration: none;
-}
-#git
-{
-  padding-left: 50%;
-  font-size: 18px;
 }
 a:hover
 {
   text-decoration: underline;
 }
+#whop
+{
+  padding-left: 5%;
+  font-size: 24px;
+  color: orchid;
+}
 #contact
 {
   padding-left: 5%;
-  color: #0bf800;
+  color: gainsboro;
   text-decoration: none;
   font-size:15px
 }
@@ -54,7 +44,7 @@ a:hover
 {
   text-decoration: underline;
 }
-button
+.select-button
 {
   font-family: Quicksand, sans-serif;
   background-color: transparent;
@@ -64,13 +54,14 @@ button
   transition-property: font-size padding;
   transition-duration: .3s
 }
-button:hover
+.select-button:hover
 {
   padding: .5rem 1rem;
   color: orchid;
   text-shadow: .5px .5px black;
   font-size: 18px;
-  background: black
+  background: black;
+  cursor: cell;
 }
 
 .whyp
@@ -88,6 +79,12 @@ button:hover
   border-radius: 12px;
   background-color: deepskyblue;
   margin: 3vh;
+  transition-property: margin;
+  transition-duration: .3s;
+}
+.divp:hover
+{
+  margin: 1.5vh;
 }
 
 .button-selected
@@ -95,6 +92,29 @@ button:hover
   background-color: black;
   color: deepskyblue;
 }
+.button-top
+{
+  visibility: hidden;
+  position: fixed;
+  bottom: 3vh;
+  right: 3vh;
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: orchid; 
+  color: black;
+  cursor: cell;
+  padding-left:1%;padding-right:1%;
+  border-radius:3px;
+  font-size: 18px;
+}
+.button-top:hover
+{
+  background-color: black;
+  color: orchid;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+}
+
 .border-gradient {
   border-image-slice: 1;
   border-width: 3px;
@@ -110,9 +130,10 @@ button:hover
   flex-flow: column nowrap;
   align-content: center;
   border-radius: 15px;
+  height: fit-content;
   width: fit-content;
   margin: 2vh;
-  padding: 2vh;
+  padding: 3vh;
 }
 .section-container
 {
@@ -131,7 +152,7 @@ button:hover
 
 .border-div
 {
-  margin-top, margin-bottom: 1vh;
+  margin-top:1vh; margin-bottom: 1vh;
   border-radius: 12px;
   background: rgb(111,8,171);
   background: linear-gradient(300deg, rgba(111,8,171,0.93) 0%, rgba(19,255,248,1) 33%, rgba(244,141,126,1) 66%, rgba(0,212,255,1) 99%);
@@ -150,6 +171,50 @@ button:hover
   text-align: center;
   font-weight: bold;
 }
+
+/* social media icon stuff*/
+.fa {
+  height: fit-content;
+  width: fit-content;
+  padding: 2vh;
+  border-radius: 50%; 
+  text-decoration: none;
+  margin: auto;
+}
+.fa:hover {
+  cursor: cell;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  border-width: 2px;
+  background: white;
+  color: orchid;
+}
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+.fa-github {
+  background-color: black;
+  color: white;
+}
+/* end social media icon stuff*/
+
 
 /* tooltip stuff */
 .tooltip {
