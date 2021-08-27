@@ -1,4 +1,5 @@
 var options = [false,false,false,false,false,false]
+var covers = [false,false, false, false, false]
 var checker = arr => arr.every(v => v === false)
 var contactInfo = {email: 'dylanbakr@gmail.com', text:'(815) 993-8931', mail:'425 W Hampton Drive'}
 function update(selected){
@@ -134,7 +135,57 @@ function add(pane) {
       else(document.getElementById("top").style.visibility="visible")
       break;
     default:
+      break;
+  }
+}
+function addInfo(cover){
+  switch(cover)
+  {
+    case "me":
+      var div = document.getElementById("me")
+      covers[0]=!covers[0]
+      if(covers[0]){
+        div.style.display="block"
+        div.scrollIntoView("smooth")
 
+      }
+      else { document.getElementById("me").style.display = "none"}
+      break;
+    case "this":
+      covers[1] = !covers[1]
+      if (covers[1]) 
+      {
+        document.getElementById("this").style.display = "block"
+        document.getElementById("this").scrollIntoView('smooth')
+      }
+      else { document.getElementById("this").style.display="none"}
+      break;
+    case "game development":
+      covers[2]=!covers[2]
+      if(covers[2])
+      {
+        document.getElementById("gameDev").style.display="block"
+        document.getElementById("gameDev").scrollIntoView('smooth')
+      }
+      else {document.getElementById("gameDev").style.display="none"}
+      break;
+    case "web development":
+      covers[3] = !covers[3]
+      if (covers[3]) {
+        document.getElementById("webDev").style.display = "block"
+        document.getElementById("webDev").scrollIntoView('smooth')
+      }
+      else { document.getElementById("webDev").style.display = "none" }
+      break;
+    case "robotics":
+      covers[4] = !covers[4]
+      if (covers[4]) {
+        document.getElementById("robotics").style.display = "block"
+        document.getElementById("robotics").scrollIntoView('smooth')
+      }
+      else { document.getElementById("robotics").style.display = "none" }
+      break;
+    default:
   }
 }
 function backToTop() {

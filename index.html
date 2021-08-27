@@ -29,12 +29,13 @@
     </div>
     <br>
       <div id="whod" name="content" style="display: none;" class="section-container">
+        <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('who')">_</span></div>
         <h2 class="title"> who </h2>
         <br></br>
         <div class="border-div">
           <div>
             <p id="whop">
-              <span style="color:deepskyblue"> hello :)</span>
+              <span style="color:deepskyblue"> hello !! :)</span>
               <br>
               my name is <span class="tooltip">Dylan Bakr.<span class="tooltiptext">{
                 <br>
@@ -63,13 +64,13 @@
         </div>
       </div>
     <br>
-
     <div id="whatd" name="content" style="display: none;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('what')">_</span></div>
       <h2 class="title"> what </h2>
     </div>
     <br>
-
     <div id="whered" name="content" style="display: none;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('where')">_</span></div>
       <h2 class="title"> where </h2>
       <br></br>
       <div style="display: flex; flex-flow: row wrap; justify-content: space-around; margin: auto; max-width: 80%">
@@ -92,14 +93,50 @@
     </div>
     <br>
     <div id="whend" name="content" style="display: none;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('when')">_</span></div>
       <h2 class="title"> when </h2>
+      <br></br>
+      <div style="max-height: 10%;">
+        <div class="section-container cover" onclick="addInfo('game development')">game development</div>
+        <div id="gameDev" class="border-div">
+          <div>
+            <div class="divp">
+              <p class="whyp">
+                
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="section-container cover" onclick="addInfo('robotics')">robotics</div>
+        <div id="robotics" class="border-div">
+          <div>
+          <div class="divp">
+            <p class="whyp">
+              
+            </p>
+          </div>
+          </div>
+        </div>
+        <div class="section-container cover" onclick="addInfo('web development')">web development</div>
+        <div id="webDev" class="border-div">
+          <div>
+            <div class="divp">
+              <p class="whyp">
+        
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <br>
     <div id="whyd" name="content" style="display: none;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('why')">_</span></div>
       <h2 class="title"> why </h2>
       <br></br>
-      <div class="border-div">
-        <div style="display: flex; flex-flow: row nowrap; overflow-x: scroll; justify-content: space-around;">
+      <div class="section-container cover" onclick="addInfo('me')">me</div>
+      <div id="me" class="border-div">
+        <div style="display: flex; flex-flow: row nowrap; overflow-x: scroll; justify-content: flex-start;">
           <br></br>
           <div class="divp">
             <p class="whyp">
@@ -131,14 +168,58 @@
           <br></br>
           <div class="divp">
             <p class="whyp">
-              too much of our time is wasted as society. by automating all processes involved in human (staying alive), people will be able to live free;<br>by allowing people to live free, imagination and inspiration may have a chance to take hold and drive them to create change
+              too much of our time is wasted as a society. by automating all processes involved in human continuation, people will be able to live free;<br>by allowing people to live free, imagination and inspiration may have a chance to take hold and drive them to create the change we so desperately need in this world
             </p>
           </div>
         </div>
       </div>
+      <div class="section-container cover" onclick="addInfo('this')">this</div>
+      <div id="this" class="border-div">
+        <div style="display: flex; flex-flow: row nowrap; overflow-x: scroll; justify-content: flex-start;">
+          <br></br>
+          <div class="divp">
+            <p class="whyp">
+              by some means, you arrived here. you've interacted with this site enough to find your way to this tile.
+            </p>
+          </div>
+          <br></br>
+          <div class="divp">
+            <p class="whyp">
+              everything you see/feel within this page, i created it. this is meant to be a portfolio, of sorts. a demonstration.
+            </p>
+          </div>
+          <br></br>
+          <div class="divp">
+            <p class="whyp">
+              as a software engineer, it is important to have some information available about you that could lead to opportunities<br><b>opportunities to teach, opportunities to learn, and opportunities to do.</b>
+            </p>
+          </div>
+          <br></br>
+        <div class="divp">
+          <p class="whyp">
+            so here it is. everything that i feel is relevant to know about me and some of my ability as a software engineer can currently or will eventually be able to be found here.
+          </p>
+        </div>
+        <br></br>
+        <div class="divp">
+          <p class="whyp">
+            first generation of this site (1.0.0) has been built using vanilla HTML/CSS/JS.<br>i intend to, once the content portion is complete, implement this same page using a frontend framework-- either Angular, Vue, or React.
+          </p>
+        </div>
+        <br></br>
+        <div class="divp">
+          <p class="whyp">
+            server side scripting will be handled most likely by using FLASK (python), but may be an Express.js deployment instead. we will weigh those benefits at a later time when it is more relevant.
+          </p>
+        </div>
+        <br></br>
+      </div>
     </div>
     <br>
-    <div id="howd" name="content" name="content" style="display: none;" class="section-container">
+    </div>
+    <br>
+    <div id="howd" name="content" style="display: none;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('how')">_</span></div>
       <h2 class="title"> how </h2>
       <div style="display: flex; flex-flow: row wrap; justify-content: space-around; margin: auto; max-width: 80%">
         <div class="mini-section-container">
