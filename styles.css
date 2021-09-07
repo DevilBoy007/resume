@@ -274,7 +274,7 @@ a:hover
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 180px;
+  width: fit-content;
   background-color: rgba(0,0,0,.66);
   color: #fff;
   font-family: "courier new", sans-serif;
@@ -282,7 +282,6 @@ a:hover
   text-align:left;
   border-radius: 6px;
   padding: 5px 10px;
-
   /* Position the tooltip */
   position: absolute;
   z-index: 1;

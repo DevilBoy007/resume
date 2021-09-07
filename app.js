@@ -142,7 +142,7 @@ function add(pane) {
       if(options[6])
       {
         button.classList.add('button-selected')
-        div.style.visibility='visible'
+        div.style.visibility = 'visible'
         div.scrollIntoView('smooth')
       }
       if(!options[6]) 
