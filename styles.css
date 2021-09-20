@@ -196,7 +196,7 @@ a:hover
 
 .border-div
 {
-  margin-top:1vh; margin-bottom: 1vh;
+  margin-top:2vh; margin-bottom: 3vh;
   border-radius: 12px;
   background: rgb(111,8,171);
   background: linear-gradient(300deg, rgba(111,8,171,0.93) 0%, rgba(19,255,248,1) 33%, rgba(244,141,126,1) 66%, rgba(0,212,255,1) 99%);
