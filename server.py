@@ -1,3 +1,7 @@
+# THIS FILE NEEDS TO BE EDITED TO SERVE RESUME SITE
+# CURRENTLY SET UP FOR RESONGER (r.i.p)
+
+
 import cgi, cgitb
 import sqlite3
 
