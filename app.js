@@ -35,6 +35,7 @@ function add(pane) {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
+        window.scrollBy(0,-12)
       }
       if(!options[0])
       {
@@ -53,6 +54,7 @@ function add(pane) {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
+        window.scrollBy(0,-12)
       }
       if(!options[1])
       {
@@ -71,6 +73,7 @@ function add(pane) {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
+        window.scrollBy(0,-12)
       }
       if(!options[2])
       {
@@ -89,6 +92,7 @@ function add(pane) {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
+        window.scrollBy(0,-12)
       }
       if(!options[3])
       {
@@ -107,6 +111,7 @@ function add(pane) {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
+        window.scrollBy(0,-12)
       }
       if(!options[4])
       {
@@ -125,6 +130,7 @@ function add(pane) {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
+        window.scrollBy(0,-12)
       }
       if(!options[5])
       {
@@ -144,9 +150,10 @@ function add(pane) {
         button.classList.add('button-selected')
         div.style.visibility = 'visible'
         div.scrollIntoView('smooth')
+        window.scrollBy(0,-12)
       }
-      if(!options[6]) 
-      { 
+      if(!options[6])
+      {
         div.style.visibility = 'hidden'
         button.classList.remove('button-selected')
       }
@@ -171,7 +178,7 @@ function addInfo(cover){
       break;
     case 'this':
       covers[1] = !covers[1]
-      if (covers[1]) 
+      if (covers[1])
       {
         document.getElementById('this').style.display = 'block'
       }
