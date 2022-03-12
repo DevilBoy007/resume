@@ -30,7 +30,7 @@
     </div>
     <br>
     <div id="whod" name="content" style="display: none;" class="section-container">
-      <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('who')">_</span></div>
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('who')">_</span></div>
       <h2 class="title"> who </h2>
       <br></br>
       <div class="border-div">
@@ -66,7 +66,7 @@
     </div>
     <br>
     <div id="whatd" name="content" style="display: none; flex-flow: column wrap;" class="section-container">
-      <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('what')">_</span></div>
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('what')">_</span></div>
       <h2 class="title"> what </h2>
       <div>
         <div class="section-container cover" onclick="addInfo('game development')">game development</div>
@@ -126,7 +126,7 @@
     <br>
     <!-- the mini section containers here should eventually pop out as fullscreen modal windows -->
     <div id="whered" name="content" style="display: none;" class="section-container">
-      <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('where')">_</span></div>
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('where')">_</span></div>
       <h2 class="title"> where </h2>
       <br></br>
       <div style="display: flex; flex-flow: row wrap; justify-content: space-around; margin: auto; max-width: 80%">
@@ -149,13 +149,13 @@
     </div>
     <br>
     <div id="whend" name="content" style="display: none;" class="section-container">
-      <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('when')">_</span></div>
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('when')">_</span></div>
       <h2 class="title"> when </h2>
       <br></br>
     </div>
     <br>
     <div id="whyd" name="content" style="display: none;" class="section-container">
-      <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('why')">_</span></div>
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('why')">_</span></div>
       <h2 class="title"> why </h2>
       <br></br>
       <div class="section-container cover" onclick="addInfo('me')">me</div>
@@ -246,7 +246,7 @@
     </div>
     <br>
     <div id="howd" name="content" style="display: none;" class="section-container">
-      <div style="text-align: right; margin-bottom: 0;"><span id="minimize" onclick="add('how')">_</span></div>
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('how')">_</span></div>
       <h2 class="title"> how </h2>
       <div style="display: flex; flex-flow: row wrap; justify-content: space-around; margin: auto; max-width: 80%">
         <div class="mini-section-container">
@@ -262,12 +262,12 @@
     </div>
     <br>
     <div id="resumed" name="content" style="visibility: hidden;" class="section-container">
-      <div style="text-align: right; margin-bottom: 1vh;"><span id="minimize" onclick="add('resume')">_</span></div>
+      <div style="text-align: right; margin-bottom: 1vh;"><span class="minimize"  onclick="add('resume')">_</span></div>
       <iframe id="pdf" src="resume.pdf" height="500"></iframe>
     </div>
     <br>
     <div style="display: flex; flex-flow: row wrap" class="button-container">
-      <button id="close" class="bottom-button" onclick="close()" title="close all">close all</button>
+      <button id="close" class="bottom-button" onclick="closeAll()" title="close all">close all</button>
       <button id="top" class="bottom-button" onclick="backToTop()" title="back to top">back to top</button>
     </div>
   </body>

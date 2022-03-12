@@ -44,7 +44,7 @@ a:hover
 {
   text-decoration: underline;
 }
-#minimize
+.minimize
 {
   text-align: right;
   padding-right: 2vw;
@@ -53,7 +53,7 @@ a:hover
   transition-property: font-size;
   transition-duration: .5s;
 }
-#minimize:hover
+.minimize:hover
 {
   color: rgb(139, 30, 30);
   cursor: cell;
@@ -113,7 +113,7 @@ a:hover
 }
 .bottom-button
 {
-  visibility: visible;
+  visibility: hidden;
   z-index: 99;
   border: none;
   outline: none;

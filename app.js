@@ -1,18 +1,19 @@
 var options = [false,false,false,false,false,false, false]
 var covers = [false,false, false, false, false]
-var checker = arr => arr.every(v => v === false) // this is awesome
-var contactInfo = {email: 'dylanbakr@gmail.com', text:'(815) 993-8931', mail:'425 W Hampton Drive'}
+// var checker = arr => arr.every(v => v === false) // this is awesome
+var show = arr => arr.filter(x => x === true).length > 2 // trying the logic
+var contactInfo = { email: 'dylanbakr@gmail.com', text:'(815) 993-8931', mail:'425 W Hampton Drive' }
 function updateContact(selected){
   switch (selected)
   {
     case 'email':
       console.log('email')
-      document.getElementById('contact').href = `'mailto:${contactInfo.email}'`
+      document.getElementById('contact').href = `mailto:${contactInfo.email}`
       document.getElementById('contact').innerHTML = contactInfo.email
       break;
     case 'text':
       console.log('text')
-      document.getElementById('contact').href = `'tel:${contactInfo.text}'`
+      document.getElementById('contact').href = `tel:${contactInfo.text}`
       document.getElementById('contact').innerHTML = contactInfo.text
       break;
     case 'mail':
@@ -24,7 +25,7 @@ function updateContact(selected){
   }
 }
 
-function add(pane) {
+var add = (pane) => {
   switch (pane) {
     case 'who':
       var div = document.getElementById('whod')
@@ -42,9 +43,17 @@ function add(pane) {
         button.classList.remove('button-selected')
         div.style.display = 'none'
       }
-      if(checker(options)){document.getElementById('top').style.visibility='hidden'}
-      else(document.getElementById('top').style.visibility='visible')
-      break;
+      if(show(options))
+      {
+        document.getElementById('top').style.visibility='visible';
+        document.getElementById('close').style.visibility='visible'
+      }
+      else
+      {
+        document.getElementById('top').style.visibility='hidden';
+        document.getElementById('close').style.visibility='hidden'
+      }
+      break
     case 'what':
       var div = document.getElementById('whatd')
       var button = document.getElementById('what')
@@ -61,9 +70,17 @@ function add(pane) {
         button.classList.remove('button-selected')
         div.style.display = 'none'
       }
-      if(checker(options)){document.getElementById('top').style.visibility='hidden'}
-      else(document.getElementById('top').style.visibility='visible')
-      break;
+      if(show(options))
+      {
+        document.getElementById('top').style.visibility='visible';
+        document.getElementById('close').style.visibility='visible'
+      }
+      else
+      {
+        document.getElementById('top').style.visibility='hidden';
+        document.getElementById('close').style.visibility='hidden'
+      }
+      break
     case 'where':
       var div = document.getElementById('whered')
       var button = document.getElementById('where')
@@ -80,9 +97,17 @@ function add(pane) {
         button.classList.remove('button-selected')
         div.style.display = 'none'
       }
-      if(checker(options)){document.getElementById('top').style.visibility='hidden'}
-      else(document.getElementById('top').style.visibility='visible')
-      break;
+      if(show(options))
+      {
+        document.getElementById('top').style.visibility='visible';
+        document.getElementById('close').style.visibility='visible'
+      }
+      else
+      {
+        document.getElementById('top').style.visibility='hidden';
+        document.getElementById('close').style.visibility='hidden'
+      }
+      break
     case 'when':
       var div = document.getElementById('whend')
       var button = document.getElementById('when')
@@ -99,9 +124,17 @@ function add(pane) {
         button.classList.remove('button-selected')
         div.style.display = 'none'
       }
-      if(checker(options)){document.getElementById('top').style.visibility='hidden'}
-      else(document.getElementById('top').style.visibility='visible')
-      break;
+      if(show(options))
+      {
+        document.getElementById('top').style.visibility='visible';
+        document.getElementById('close').style.visibility='visible'
+      }
+      else
+      {
+        document.getElementById('top').style.visibility='hidden';
+        document.getElementById('close').style.visibility='hidden'
+      }
+      break
     case 'why':
       var div = document.getElementById('whyd')
       var button = document.getElementById('why')
@@ -118,9 +151,17 @@ function add(pane) {
         button.classList.remove('button-selected')
         div.style.display = 'none'
       }
-      if(checker(options)){document.getElementById('top').style.visibility='hidden'}
-      else(document.getElementById('top').style.visibility='visible')
-      break;
+      if(show(options))
+      {
+        document.getElementById('top').style.visibility='visible';
+        document.getElementById('close').style.visibility='visible'
+      }
+      else
+      {
+        document.getElementById('top').style.visibility='hidden';
+        document.getElementById('close').style.visibility='hidden'
+      }
+      break
     case 'how':
       var div = document.getElementById('howd')
       var button = document.getElementById('how')
@@ -137,9 +178,17 @@ function add(pane) {
         button.classList.remove('button-selected')
         div.style.display = 'none'
       }
-      if(checker(options)){document.getElementById('top').style.visibility='hidden'}
-      else{document.getElementById('top').style.visibility='visible'}
-      break;
+      if(show(options))
+      {
+        document.getElementById('top').style.visibility='visible';
+        document.getElementById('close').style.visibility='visible'
+      }
+      else
+      {
+        document.getElementById('top').style.visibility='hidden';
+        document.getElementById('close').style.visibility='hidden'
+      }
+      break
     case 'resume':
       var div = document.getElementById('resumed')
       var button = document.getElementById('resume')
@@ -157,9 +206,17 @@ function add(pane) {
         div.style.visibility = 'hidden'
         button.classList.remove('button-selected')
       }
-      if (checker(options)) { document.getElementById('top').style.visibility = 'hidden' }
-      else { document.getElementById('top').style.visibility = 'visible' }
-      break;
+      if(show(options))
+      {
+        document.getElementById('top').style.visibility='visible';
+        document.getElementById('close').style.visibility='visible'
+      }
+      else
+      {
+        document.getElementById('top').style.visibility='hidden';
+        document.getElementById('close').style.visibility='hidden'
+      }
+      break
     default:
       break;
   }
@@ -212,4 +269,13 @@ function addInfo(cover){
 function backToTop() {
   document.body.scrollTop = 0 // for safari
   document.documentElement.scrollTop = 0 // for others
+}
+function closeAll() {
+  var arr = document.getElementsByClassName('button-selected')
+  console.log(arr.length)
+  for (let x of arr)
+  {
+    setTimeout(() => { x.click() }, 300);
+  }
+  backToTop()
 }
