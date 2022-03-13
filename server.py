@@ -8,11 +8,11 @@ import sqlite3
 cgitb.enable()
 from flask import Flask, render_template, escape, request, redirect
 
-###		non requestable functions	###			###			###			###
+###		non requestable functions	###	   must exist before Flask object is instantiated		###			###			###
 
 # THIS FUNCTION NEEDS TO CHECK CASE WHERE NAME EXISTS IN DATABASE
 def create_user(name, email, password, handle, dob):
-# create injection safe variables to use in our statements
+# create injection safe variables to use in our sql statements
 	name_ = '{}'.format(name)
 	email_ = '{}'.format(email)
 	password_ = '{}'.format(password)
@@ -53,26 +53,26 @@ app = Flask(__name__)
 # main function that serves static landing page upon get request to '/'
 @app.route('/', methods=['GET'])
 def main():
-	return render_template('landing_page.html')
+	return render_template('index.html')
 
-# function that parses form data upon POST request to '/'
-@app.route('/', methods=['POST'])
-def handle_form():
-	form = cgi.FieldStorage()
-	name = request.form.get('name')
-	email = request.form.get('email')
-	password = request.form.get('password')
-	handle = request.form.get('_name')
-	dob = request.form.get('dob')
-	create_user(name, email, password, handle, dob)
-	#return "made it here"
-	return redirect("./static/upload.html", code = 302)
-# function that parses form data upon POST request to /upload.html
-@app.route('/upload.html', methods=['POST'])
-def upload():
-	form = cgi.FieldStorage()
-	title = request.form.get('title')
-	majKey = request.form.get('key1')
-	minKey = request.form.get('key2')
-if __name__ == '__main__':
-	app.run(debug=True)
+# # function that parses form data upon POST request to '/'
+# @app.route('/', methods=['POST'])
+# def handle_form():
+# 	form = cgi.FieldStorage()
+# 	name = request.form.get('name')
+# 	email = request.form.get('email')
+# 	password = request.form.get('password')
+# 	handle = request.form.get('_name')
+# 	dob = request.form.get('dob')
+# 	create_user(name, email, password, handle, dob)
+# 	#return "made it here"
+# 	return ### leave None return until we have page support ### redirect("./static/upload.html", code = 302)
+# # function that parses form data upon POST request to /upload.html
+# @app.route('/upload.html', methods=['POST'])
+# def upload():
+# 	form = cgi.FieldStorage()
+# 	title = request.form.get('title')
+# 	majKey = request.form.get('key1')
+# 	minKey = request.form.get('key2')
+# if __name__ == '__main__':
+# 	app.run(debug=True)
