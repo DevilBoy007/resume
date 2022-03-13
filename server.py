@@ -53,7 +53,7 @@ app = Flask(__name__)
 # main function that serves static landing page upon get request to '/'
 @app.route('/', methods=['GET'])
 def main():
-	return render_template('index.html')
+	return render_template('./index.html')
 
 # # function that parses form data upon POST request to '/'
 # @app.route('/', methods=['POST'])

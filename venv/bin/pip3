@@ -1,4 +1,4 @@
-#!/Users/dbakr/Documents/Resume/resume/venv/bin/python3
+#!/Users/dbakr/Documents/Git/Resume/resume/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
