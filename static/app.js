@@ -36,7 +36,7 @@ var add = (pane) => {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
-        window.scrollBy(0,-90)
+        window.scrollBy(0,-30)
       }
       if(!options[0])
       {
@@ -63,7 +63,7 @@ var add = (pane) => {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
-        window.scrollBy(0,-90)
+        window.scrollBy(0,-30)
       }
       if(!options[1])
       {
@@ -90,7 +90,7 @@ var add = (pane) => {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
-        window.scrollBy(0,-90)
+        window.scrollBy(0,-30)
       }
       if(!options[2])
       {
@@ -117,7 +117,7 @@ var add = (pane) => {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
-        window.scrollBy(0,-90)
+        window.scrollBy(0,-30)
       }
       if(!options[3])
       {
@@ -144,7 +144,7 @@ var add = (pane) => {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
-        window.scrollBy(0,-90)
+        window.scrollBy(0,-30)
       }
       if(!options[4])
       {
@@ -171,7 +171,7 @@ var add = (pane) => {
         button.classList.add('button-selected')
         div.style.display = 'block'
         div.scrollIntoView('smooth')
-        window.scrollBy(0,-90)
+        window.scrollBy(0,-30)
       }
       if(!options[5])
       {
@@ -199,7 +199,7 @@ var add = (pane) => {
         button.classList.add('button-selected')
         div.style.visibility = 'visible'
         div.scrollIntoView('smooth')
-        window.scrollBy(0,-90)
+        window.scrollBy(0,-30)
       }
       if(!options[6])
       {

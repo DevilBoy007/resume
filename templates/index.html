@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="app.js"></script>
+    <script src="{{url_for('static', filename='app.js')}}"></script> <!---for flask--->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!---for flask--->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>dylan</title>
+  </head>
+  <body style="background-color: slategrey; align-self: center; cursor: crosshair;">
+    <div id="title" class="section-container" style="margin-top: 3vh;">
+      <br>
+      <div class="border-div">
+        <div class="title">
+          <h1> dylan </h1>
+          <span>software engineer</span>
+          <br></br>
+          <div style="flex-flow: row wrap;">
+            <button id="who" class="select-button border-gradient border-gradient-purple" onclick="add('who')">W H O</button>
+            <button id="what" class="select-button border-gradient border-gradient-purple" onclick="add('what')">W H A T</button>
+            <button id="where" class="select-button border-gradient border-gradient-purple" onclick="add('where')">W H E R E</button>
+            <button id="when" class="select-button border-gradient border-gradient-purple" onclick="add('when')">W H E N</button>
+            <button id="why" class="select-button border-gradient border-gradient-purple" onclick="add('why')">W H Y</button>
+            <button id="how" class="select-button border-gradient border-gradient-purple" onclick="add('how')">H O W</button>
+            <button id="resume" class="select-button border-gradient border-gradient-purple" onclick="add('resume')">RESUME</button>
+          </div>
+          <br></br>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div id="whod" name="content" style="display: none;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('who')">_</span></div>
+      <h2 class="title"> who </h2>
+      <br></br>
+      <div class="border-div">
+        <div>
+          <p id="whop">
+            <span style="color:deepskyblue"> hello !! :)</span>
+            <br>
+            my name is <span class="tooltip">Dylan Bakr.<span class="tooltiptext">{
+              <br>
+              name:&emsp;<span style="color: #0bf800"> 'dylan'</span><br>
+              age:&emsp;<span style="color: #0bf800">22</span><br>
+              height:&emsp;<span style="color: #0bf800">6'0"</span><br>
+              likes:&emsp;<span style="color: #0bf800"> 'making things happen'</span><br>
+            }</span></span>
+            <select onchange="updateContact(this.value)">
+              <option value="email">email</option>
+              <option value="text">text</option>
+              <option value="mail">mail</option>
+            </select> : <a id="contact" href="mailto:dylanbakr@gmail.com">dylanbakr@gmail.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="border-div" style="margin-top: 1vh;">
+        <div style="display: flex; justify-content: space-around; padding: 1vh;">
+          <a title="professional network" href="https://www.linkedin.com/in/dbakr" class="fa fa-linkedin"></a>
+          <a title="some of the cool stuff i've made" href="https://www.github.com/DevilBoy007" class="fa fa-github"></a>
+          <a title="stupid bird app" href="https://www.twitter.com/___squeeze___" class="fa fa-twitter"></a>
+          <a title="very new here"href="https://www.reddit.com/u/devilboy0007" class="fa fa-reddit"></a>
+          <a title="mostly food :p" href="https://www.snapchat.com/add/dylan_bakr" class="fa fa-snapchat-ghost"></a>
+          <a title="my life in photos" href="https://www.instagram.com/dylan_bakr" class="fa fa-instagram"></a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div id="whatd" name="content" style="display: none; flex-flow: column wrap;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('what')">_</span></div>
+      <h2 class="title"> what </h2>
+      <div>
+        <div class="section-container cover" onclick="addInfo('game development')">game development</div>
+        <div id="gameDev" class="border-div">
+          <div>
+            <div class="static-div">
+              <p class="whyp">
+                During my 8<sup>th</sup> grade year, used <a href="https://www.alice.org/about">Alice</a>
+                (which is basically 3D Scratch from Carnegie Mellon) to build out a game I called <i>A Wizarding World</i>
+              </p>
+            </div>
+            <div class="static-div">
+              <p class="whyp">
+                My junior year of college, I began learning to use Unity for the development of a commemorative VR garden as part
+                of a project I was involved in for <a href="https://www.wfyi.org/programs/eva">WFYI</a> (<i>see resume</i>)
+              </p>
+            </div>
+            <div class="static-div">
+              <p class="whyp">
+                Developed a <i>Hunt the Wumpus</i> game during my sophomore year of college as part of my OOP Java course.<br>
+                Download the <a href="https://github.com/DevilBoy007/Wumpus">zip</a> and play it for yourself! (<i>extra credit
+                  was to reskin the game</i>)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="section-container cover" onclick="addInfo('robotics')">robotics</div>
+        <div id="robotics" class="border-div">
+          <div>
+            <div class="static-div">
+              <p class="whyp">
+                Led a robotics team during 7<sup>th</sup> grade in learning the (then) new <a href="https://www.lego.com/en-us/service/buildinginstructions/8547"><i>Lego Mindstorms&trade; 2.0</i></a> robots my <a href="http://perucatholic.org">school</a> had just acquired.<br>
+                We built various robots using combinations of motors and sensors. Learnt basics to top-down programming as
+                well as conditional logic. We then toured the younger grades classrooms with the robots and had them interact
+                with each one.
+              </p>
+            </div>
+            <div class="static-div">
+              <p class="whyp">
+                Have used Python for programming <a href="http://arcbotics.com/products/sparki/"><i>Sparki&trade;</i></a> as part of my time as a comp. sci. departmental tutor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="section-container cover" onclick="addInfo('web development')">web development</div>
+        <div id="webDev" class="border-div">
+          <div>
+            <div class="static-div">
+              <p class="whyp">
+                junior/senior year butler experience opportunites
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- the mini section containers here should eventually pop out as fullscreen modal windows -->
+    <div id="whered" name="content" style="display: none;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('where')">_</span></div>
+      <h2 class="title"> where </h2>
+      <br></br>
+      <div style="display: flex; flex-flow: row wrap; justify-content: space-around; margin: auto; max-width: 80%">
+        <div class="mini-section-container">
+          <span style="color: black; font-weight: bold;">orignally from:</span>LaSalle, Illinois USA
+        </div>
+        <div class="mini-section-container">
+          <span style="color: black; font-weight: bold;">currently located:</span>Indianapolis, Indiana USA
+        </div>
+        <div class="mini-section-container" style="text-align: right;">
+          <span style="color: black; font-weight: bold;">willing to relocate?</span>y e s
+        </div>
+        <div class="mini-section-container">
+          <span style="color: black; font-weight: bold;">current employment:</span>Milliman, Indianapolis, IN USA
+        </div>
+        <div class="mini-section-container">
+          <span style="color: black; font-weight: bold;">education:</span>Butler University, Indianapolis, IN USA
+        </div>
+      </div>
+    </div>
+    <br>
+    <div id="whend" name="content" style="display: none;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('when')">_</span></div>
+      <h2 class="title"> when </h2>
+      <br></br>
+    </div>
+    <br>
+    <div id="whyd" name="content" style="display: none;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('why')">_</span></div>
+      <h2 class="title"> why </h2>
+      <br></br>
+      <div class="section-container cover" onclick="addInfo('me')">me</div>
+      <div id="me" class="border-div">
+        <div style="display: flex; flex-flow: row nowrap; overflow-x: scroll; justify-content: flex-start;">
+          <br></br>
+          <div class="static-div">
+            <p class="whyp">
+            i have always had a passion for writing code;<br>creating software is a beautiful process that looks different for virtually everyone;<br>yet each person holds the same power to create amazing tools that can make an impact on someone's life globally, instantly.
+            </p>
+
+          </div>
+          <br></br>
+          <div class="static-div">
+            <p class="whyp">
+              it is said that if you enjoy what you do, you never work a day in your life--<br>this is true as far as i've experienced;<br>my goal in life is to love and to enjoy myself. i enjoy answering questions. really, i enjoy information.. there's a word for that isn't there? .. what is it . . ? ah ** <i>learning</i><br>that's what i enjoy doing;<br>and the internet is the best place to do that.
+            </p>
+
+          </div>
+          <br></br>
+          <div class="static-div">
+            <p class="whyp">
+              i believe that software can help society rapidly progress towards a better, cleaner future.<br>i believe many <span class="tooltip">menial tasks<span class="tooltiptext">
+                transportation<br>
+                fast food<br>
+                waste management<br>
+                maintainence<br>
+                agriculture<br>
+                distribution<br>
+                construction<br>
+                production<br>
+              </span></span>
+              should be replaced by automation and would like to contribute to the migration of them thereto.
+            </p>
+
+          </div>
+          <br></br>
+          <div class="static-div">
+            <p class="whyp">
+              too much of our time is wasted as a society. by automating all processes involved in human continuation, people will be able to live free;<br>by allowing people to live free, imagination and inspiration may have a chance to take hold and drive them to create the change we so desperately need in this world
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section-container cover" onclick="addInfo('this')">this</div>
+      <div id="this" class="border-div">
+        <div style="display: flex; flex-flow: row nowrap; overflow-x: scroll; justify-content: flex-start;">
+          <br></br>
+          <div class="static-div">
+            <p class="whyp">
+              by some means, you arrived here. you've interacted with this site enough to find your way to this tile.
+            </p>
+          </div>
+          <br></br>
+          <div class="static-div">
+            <p class="whyp">
+              everything you see/feel within this page, i created it. this is meant to be a portfolio, of sorts. a demonstration.
+            </p>
+          </div>
+          <br></br>
+          <div class="static-div">
+            <p class="whyp">
+              as a software engineer, it is important to have some information available about you that could lead to opportunities<br><b>opportunities to teach, opportunities to learn, and opportunities to do.</b>
+            </p>
+          </div>
+          <br></br>
+        <div class="static-div">
+          <p class="whyp">
+            so here it is. everything that i feel is relevant to know about me and some of my credibility as a software engineer can currently, or will eventually, be able to be found here.
+          </p>
+        </div>
+        <br></br>
+        <div class="static-div">
+          <p class="whyp">
+            first generation of this site (1.0.0) has been built using vanilla HTML/CSS/JS.<br>i intend to, once the content portion is complete, implement this same page using a frontend framework-- either Angular, Vue, or React.
+          </p>
+        </div>
+        <br></br>
+        <div class="static-div" style="padding-right: 2vw;">
+          <p class="whyp">
+            server side scripting will be handled most likely by using FLASK (python), but may be an Express.js deployment instead. we will weigh those benefits at a later time when it is more relevant.
+          </p>
+        </div>
+        <br></br>
+      </div>
+    </div>
+    <br>
+    </div>
+    <br>
+    <div id="howd" name="content" style="display: none;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('how')">_</span></div>
+      <h2 class="title"> how </h2>
+      <div style="display: flex; flex-flow: row wrap; justify-content: space-around; margin: auto; max-width: 80%">
+        <div class="mini-section-container">
+          <span style="color: black; font-weight: bold;">web automation:</span>Python Selenium
+        </div>
+        <div class="mini-section-container">
+          <span style="color: black; font-weight: bold;">deployment stack:</span>M E A N
+        </div>
+        <div class="mini-section-container">
+          <span style="color: black; font-weight: bold;">static file serving</span> - Python FLASK<br> - Express.js
+        </div>
+      </div>
+    </div>
+    <br>
+    <div id="resumed" name="content" style="visibility: hidden;" class="section-container">
+      <div style="text-align: right; margin-bottom: 1vh;"><span class="minimize"  onclick="add('resume')">_</span></div>
+      <iframe id="pdf" src="resume.pdf" height="500"></iframe>
+    </div>
+    <br>
+    <div style="display: flex; flex-flow: row wrap" class="button-container">
+      <button id="close" class="bottom-button" onclick="closeAll()" title="close all">close all</button>
+      <button id="top" class="bottom-button" onclick="backToTop()" title="back to top">back to top</button>
+    </div>
+  </body>
+</html>

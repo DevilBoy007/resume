@@ -1,0 +1,321 @@
+/*@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+*/
+h1
+{
+  font-family: Quicksand, sans-serif;
+  margin: 0;
+  padding-top: 5%;
+  color: deepskyblue;
+}
+h2
+{
+  font-family: Quicksand, sans-serif;
+  margin: 0;
+  padding-top: 1vh;
+  color: gainsboro;
+}
+span
+{
+  color: gainsboro
+}
+select
+{
+  color: orchid;
+  margin-left: 5%;
+  background-color: rgba(0,0,0,.15);
+  font-size: 12px;
+}
+a:hover
+{
+  text-decoration: underline;
+}
+#whop
+{
+  padding-left: 5%;
+  font-size: 24px;
+  color: orchid;
+}
+#contact
+{
+  padding-left: 5%;
+  color: gainsboro;
+  text-decoration: none;
+  font-size:15px
+}
+#contact:hover
+{
+  text-decoration: underline;
+}
+.minimize
+{
+  text-align: right;
+  padding-right: 2vw;
+  padding-top: 2vh;
+  font-weight: bold; font-size: 15px;
+  transition-property: font-size;
+  transition-duration: .5s;
+}
+.minimize:hover
+{
+  color: rgb(139, 30, 30);
+  cursor: cell;
+}
+#me, #this, #robotics, #webDev, #gameDev
+{
+  display: none;
+}
+
+.select-button
+{
+  font-family: Quicksand, sans-serif;
+  background-color: transparent;
+  color: gainsboro;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  transition: all .3s
+}
+.select-button:hover
+{
+  padding: .5rem 1rem;
+  color: orchid;
+  text-shadow: .5px .5px black;
+  font-size: 18px;
+  background: black;
+  cursor: cell;
+}
+.whyp
+{
+  color: black;
+  padding: 1vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+.whyp>a
+{
+  color: gainsboro;
+  text-decoration: none;
+}
+.whyp>a:hover
+{
+  text-decoration: underline;
+  cursor: cell;
+}
+.button-selected
+{
+  background-color: black;
+  color: deepskyblue;
+}
+
+.button-container
+{
+  position: fixed;
+  bottom: 3vh;
+  right: 3vh;
+  padding-right:1%;
+}
+.bottom-button
+{
+  visibility: hidden;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: orchid;
+  color: black;
+  cursor: cell;
+  padding-left:1%;padding-right:1%;
+  border-radius:3px;
+  font-size: 18px;
+}
+.bottom-button:hover
+{
+  background-color: black;
+  color: orchid;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+}
+
+.border-gradient {
+  border-image-slice: 1;
+  border-width: 3px;
+}
+.border-gradient-purple {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+.static-div
+{
+  box-shadow: 1px 3px 6px 0 rgba(0,0,0,.5);
+  border-radius: 12px;
+  background-color: deepskyblue;
+  margin: 3vh;
+  transition-property: margin;
+  transition-duration: .3s;
+  min-width: 30%;
+  text-align: justify;
+  overflow-y: scroll;
+}
+.dynadiv
+{
+  box-shadow: 1px 3px 6px 0 rgba(0,0,0,.5);
+  border-radius: 12px;
+  background-color: deepskyblue;
+  margin: 3vh;
+  transition-property: margin;
+  transition-duration: .3s;
+  min-width: 30%;
+  text-align: justify;
+}
+.dynadiv:hover
+{
+  margin: 1.5vh;
+}
+.mini-section-container
+{
+  font-family: Quicksand, sans-serif;
+  background-color: deepskyblue;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  border-radius: 15px;
+  height: fit-content;
+  width: fit-content;
+  margin: 2vh;
+  padding: 3vh;
+  transition-property: margin;
+  transition-duration: .3s;
+}
+.mini-section-container:hover
+{
+  margin: .5vh
+}
+.section-container
+{
+  font-family: Quicksand, sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  border-radius: 15px;
+  max-width: 81%;
+  margin: auto;
+  padding: 3vh;
+  padding-top: 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.75);
+  background-color: #303030
+}
+
+.border-div
+{
+  margin-top:2vh; margin-bottom: 3vh;
+  border-radius: 12px;
+  background: rgb(111,8,171);
+  background: linear-gradient(300deg, rgba(111,8,171,0.93) 0%, rgba(19,255,248,1) 33%, rgba(244,141,126,1) 66%, rgba(0,212,255,1) 99%);
+  padding: 2px;
+}
+.border-div>div
+{
+  padding: 6px;
+  border-radius: 12px;
+  background: #303030
+}
+.title
+{
+  margin: 0;
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* social media icon stuff*/
+.fa {
+  height: fit-content;
+  width: fit-content;
+  padding: 2vh;
+  border-radius: 50%;
+  text-decoration: none;
+  margin: auto;
+  transition-property: all;
+  transition-duration: .5s;
+}
+.fa:hover {
+  padding: 1vh;
+  cursor: cell;
+  opacity: 0.7;
+  text-decoration: none;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  border-width: 2px;
+  background: white;
+  color: orchid;
+}
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+.fa-github {
+  background-color: black;
+  color: white;
+}
+/* end social media icon stuff*/
+
+
+/* tooltip stuff */
+.tooltip {
+  color: black;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: rgba(0,0,0,.66);
+  color: #fff;
+  font-family: "courier new", sans-serif;
+  font-size: 12px;
+  text-align:left;
+  border-radius: 6px;
+  padding: 5px 10px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+  box-shadow: 0 1px 2px 0 rgba(255,255,255,.75)
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* end tooltip stuff */
+.cover
+{
+  background-color: deepskyblue;
+  margin-top: 1vh;
+  padding:1vh;
+  text-align: center;
+  font-size: 36px;
+  width: 30%;
+  transition: all .2s
+}
+.cover:hover
+{
+  color: gainsboro;
+  background-color: rgba(0, 0, 0, 0.666);
+  font-size: 42px;
+  width: 35%;
+  cursor: cell;
+}

@@ -1,12 +1,12 @@
 # THIS FILE NEEDS TO BE EDITED TO SERVE RESUME SITE
-# CURRENTLY SET UP FOR RESONGER (r.i.p)
+# CURRENTLY SET UP FOR RESONGER (r.i.p) 
 
 
 import cgi, cgitb
 import sqlite3
 
 cgitb.enable()
-from flask import Flask, render_template, escape, request, redirect
+from flask import Flask, render_template, escape, request, redirect, url_for
 
 ###		non requestable functions	###	   must exist before Flask object is instantiated		###			###			###
 
@@ -50,10 +50,19 @@ def create_user(name, email, password, handle, dob):
 # create the Flask application object
 app = Flask(__name__)
 
+
 # main function that serves static landing page upon get request to '/'
 @app.route('/', methods=['GET'])
 def main():
-	return render_template('./index.html')
+	return render_template('index.html')
+##	alternate way to include stylesheet	###
+@app.route('/resume.pdf')
+def resume():
+    return redirect(url_for('static', filename='resume.pdf'))
+###	alternate way to include stylesheet	###
+# @app.route('/styles.css')
+# def favicon():
+#     return redirect(url_for('static', filename='styles.css'))
 
 # # function that parses form data upon POST request to '/'
 # @app.route('/', methods=['POST'])
