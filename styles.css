@@ -150,7 +150,6 @@ a:hover
   transition-duration: .3s;
   min-width: 30%;
   text-align: justify;
-  overflow-y: scroll;
 }
 .dynadiv
 {
