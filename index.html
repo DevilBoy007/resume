@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v2.min.js"></script>
+    <script src="./src/timeknots-min.js"></script>
 
     <title>dylan</title>
     <script src="app.js"></script>    
@@ -59,11 +61,11 @@
       <div class="border-div" style="margin-top: 1vh;">
         <div style="display: flex; justify-content: space-around; padding: 1vh;">
           <a title="professional network" href="https://www.linkedin.com/in/dbakr" class="fa fa-linkedin"></a>
-          <a title="some of the cool stuff i've made" href="https://www.github.com/DevilBoy007" class="fa fa-github"></a>
-          <a title="stupid bird app" href="https://www.twitter.com/___squeeze___" class="fa fa-twitter"></a>
-          <a title="very new here"href="https://www.reddit.com/u/devilboy0007" class="fa fa-reddit"></a>
+          <a title="some of the cool stuff i've made (including this site)" href="https://www.github.com/DevilBoy007" class="fa fa-github"></a>
+          <a title="stupid dumb bird app" href="https://www.twitter.com/___squeeze___" class="fa fa-twitter"></a>
+          <a title="here for the memes"href="https://www.reddit.com/u/devilboy0007" class="fa fa-reddit"></a>
           <a title="mostly food :p" href="https://www.snapchat.com/add/dylan_bakr" class="fa fa-snapchat-ghost"></a>
-          <a title="my life in photos" href="https://www.instagram.com/dylan_bakr" class="fa fa-instagram"></a>
+          <a title="occasional new photos" href="https://www.instagram.com/dylan_bakr" class="fa fa-instagram"></a>
         </div>
       </div>
     </div>
@@ -118,9 +120,7 @@
         <div id="webDev" class="border-div">
           <div>
             <div class="static-div">
-              <p class="whyp">
-                junior/senior year butler experience opportunites
-              </p>
+              <!--iframe src="https://sniperstreams.app" height="1080" width="1920"></iframe-->
             </div>
           </div>
         </div>
@@ -155,6 +155,22 @@
       <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('when')">_</span></div>
       <h2 class="title"> when </h2>
       <br></br>
+      <div id="timeline"></div>
+      <script>
+        var lifetimeline = [
+            { name: "Born.", date: "1999-06-04", img: "./img/me.jpeg" },
+            { name: "Used Alice 3 to create <em>A Wizarding World</em>", date: "2013-01-30", img: "./img/alice.jpeg" },
+            { name: "Started doing local electronics repairs (iPhones, game consoles, PCs, etc.)", date: "2013-07-21", img: "./img/repairs.jpeg" },
+            { name: "Enrolled in AP Computer Science. Began learning Java.", date: "2016-08-21", img: "./img/java.png" },
+            { name: "Placed 4th in Illinois WYSE competition for Computer Science", date: "2017-04-24", img: "./img/competition.jpeg" },
+            { name: "Enrolled in undergrad for Comp. Sci. & Engineering @ Butler University", date: "2017-08-20", img: "./img/butler.jpeg" },
+            { name: "First commissioned job redesigning website for local hometown church.", date: "2018-05-19", img: "./img/church.jpeg" },
+            { name: "Second commissioned job designing a website for local radon testing company", date: "2018-06-01", img: "./img/radon.jpeg" }
+          ];
+
+          TimeKnots.draw("#timeline", lifetimeline, { dateFormat: "%B %Y", color: "#00bfff", width: 900, labelFormat: "%Y", background: "#000" });
+
+      </script>
     </div>
     <br>
     <div id="whyd" name="content" style="display: none;" class="section-container">
