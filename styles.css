@@ -149,7 +149,7 @@ a:hover
   transition-property: margin;
   transition-duration: .3s;
   min-width: 60vw;
-  max-height: 20vh;
+  min-height: 20vh;
   text-align: justify;
   overflow: auto;
 }
