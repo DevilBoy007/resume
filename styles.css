@@ -20,7 +20,7 @@ span
 }
 select
 {
-  color: orchid;
+  color: gainsboro;
   margin-left: 5%;
   background-color: rgba(0,0,0,.15);
   font-size: 12px;
@@ -33,7 +33,7 @@ a:hover
 {
   padding-left: 5%;
   font-size: 24px;
-  color: orchid;
+  color: gold;
 }
 #contact
 {
@@ -208,7 +208,7 @@ a:hover
   margin-top:2vh; margin-bottom: 3vh;
   border-radius: 12px;
   background: rgb(111,8,171);
-  background: linear-gradient(300deg, rgba(111,8,171,0.93) 0%, rgba(19,255,248,1) 33%, rgba(244,141,126,1) 66%, rgba(0,212,255,1) 99%);
+  background: linear-gradient(300deg, #ffffff 0%, #DA70D6 33%,#ffffff 66%, #DA70D6 99%);
   padding: 2px;
 }
 .border-div>div

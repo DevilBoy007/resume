@@ -18,7 +18,7 @@ function updateContact(selected){
       break;
     case 'mail':
       console.log('mail')
-      document.getElementById('contact').href = 'https://goo.gl/maps/bTkq7kuiwpWBuZMx6'
+      document.getElementById('contact').href = 'https://goo.gl/maps/8GrA8GrprMHgGwrm6'
       document.getElementById('contact').innerHTML = contactInfo.mail
       break;
     default:
