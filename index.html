@@ -157,15 +157,28 @@
       <br></br>
       <div id="timeline"></div>
       <script>
+        converter = {"0":"01", "1":"02","2":"03","3":"04","4":"05","5":"06","6":"07","7":"08","8":"09","9":"10","10":"11","11":"12"}
+        const today = new Date().getFullYear() + "-" +converter[new Date().getMonth()] + "-" + new Date().getDate()
         var lifetimeline = [
-            { name: "Born.", date: "1999-06-04", img: "./img/me.jpeg" },
+            //{ name: "Born.", date: "1999-06-04", img: "./img/me.jpeg" },
             { name: "Used Alice 3 to create <em>A Wizarding World</em>", date: "2013-01-30", img: "./img/alice.jpeg" },
             { name: "Started doing local electronics repairs (iPhones, game consoles, PCs, etc.)", date: "2013-07-21", img: "./img/repairs.jpeg" },
             { name: "Enrolled in AP Computer Science. Began learning Java.", date: "2016-08-21", img: "./img/java.png" },
             { name: "Placed 4th in Illinois WYSE competition for Computer Science", date: "2017-04-24", img: "./img/competition.jpeg" },
             { name: "Enrolled in undergrad for Comp. Sci. & Engineering @ Butler University", date: "2017-08-20", img: "./img/butler.jpeg" },
             { name: "First commissioned job redesigning website for local hometown church.", date: "2018-05-19", img: "./img/church.jpeg" },
-            { name: "Second commissioned job designing a website for local radon testing company", date: "2018-06-01", img: "./img/radon.jpeg" }
+            { name: "Second commissioned job designing a website for local radon testing company", date: "2018-06-01", img: "./img/radon.jpeg" },
+            { name: "Began job as one of Butler IT's Student Technician", date: "2019-08-17", img: "./img/butler.jpeg" },
+            { name: "Began second job as Computer Science Departmental tutor", date: "2020-09-17", img: "./img/butler.jpeg" },
+            { name: "Promoted to Butler IT's Student Technician Team Lead", date: "2020-08-17", img: "./img/butler.jpeg" },
+            { name: "Commissioned to develop web store (kickzgalorellc.com-- deprecated) using Shopify's platform", date: "2021-01-01", img: "./img/branding.jpg" },
+            { name: "Began development of Sniper Streams", date: "2022-01-01", img: "./img/favicon.png" },
+            { name: "Finished @ Butler", date: "2022-05-01", img: "./img/butler.png" },
+            { name: "Began career as first full-time software engineer at Milliman Indianapolis Health", date: "2022-06-07", img: "./img/milliman.svg" },
+            { name: "Launch of Sniper Streams", date: "2023-01-01", img: "./img/favicon.png" },
+            { name: "Deployment of this site", date: "2023-01-05", img: "./img/cloud.gif" },
+            { name: "Currently working full-time as a software engineer while maintaining various side projects including: Sniper Streams, Fun HTML, this demo site, Meal Tool, Fetch Stocks, & Atlas v1.2.0 (Jarvis side assistant)", date: today, img: "./img/cloud.gif" },
+            
           ];
 
           TimeKnots.draw("#timeline", lifetimeline, { dateFormat: "%B %Y", color: "#00bfff", width: 900, labelFormat: "%Y", background: "#000" });

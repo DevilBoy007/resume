@@ -2,7 +2,7 @@ var options = [false,false,false,false,false,false, false]
 var covers = [false,false, false, false, false]
 // var checker = arr => arr.every(v => v === false) // this is awesome
 var show = arr => arr.filter(x => x === true).length > 2 // trying the logic
-var contactInfo = { email: 'dylanbakr@gmail.com', text:'(815) 993-8931', mail:'425 W Hampton Drive' }
+var contactInfo = { email: 'dylanbakr@gmail.com', text:'(815) 993-8931', mail:'1806 Woodlawn Avenue' }
 function updateContact(selected){
   switch (selected)
   {
