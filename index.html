@@ -34,7 +34,7 @@
       </div>
     </div>
     <br>
-    <div id="whod" name="content" style="display: none;" class="section-container">
+    <div id="whod"  style="display: none;" class="section-container">
       <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('who')">_</span></div>
       <h2 class="title"> who </h2>
       <br></br>
@@ -70,10 +70,10 @@
       </div>
     </div>
     <br>
-    <div id="whatd" name="content" style="display: none; flex-flow: column wrap;" class="section-container">
+    <div id="whatd"  style="display: none; flex-flow: column wrap;" class="section-container">
       <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('what')">_</span></div>
       <h2 class="title"> what </h2>
-      <div>
+
         <div class="section-container cover" onclick="addInfo('game development')">game development</div>
         <div id="gameDev" class="border-div">
           <div>
@@ -120,15 +120,20 @@
         <div id="webDev" class="border-div">
           <div>
             <div class="static-div">
-              <!--iframe src="https://sniperstreams.app" height="1080" width="1920"></iframe-->
+              <div class="frame-wrapper" onclick="goToExternal('https:\/\/sniperstreams.app')">
+                <iframe src="https://sniperstreams.app" height="100%" width="100%"></iframe>
+              </div>
+              <div class="frame-wrapper" onclick="goToExternal('https:\/\/bakr.dev')">
+                <iframe src="https://bakr.dev" height="100%" width="100%"></iframe>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
     </div>
     <br>
     <!-- the mini section containers here should eventually pop out as fullscreen modal windows -->
-    <div id="whered" name="content" style="display: none;" class="section-container">
+    <div id="whered"  style="display: none;" class="section-container">
       <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('where')">_</span></div>
       <h2 class="title"> where </h2>
       <br></br>
@@ -151,7 +156,7 @@
       </div>
     </div>
     <br>
-    <div id="whend" name="content" style="display: none;" class="section-container">
+    <div id="whend"  style="display: none;" class="section-container">
       <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('when')">_</span></div>
       <h2 class="title"> when </h2>
       <br></br>
@@ -186,7 +191,7 @@
       </script>
     </div>
     <br>
-    <div id="whyd" name="content" style="display: none;" class="section-container">
+    <div id="whyd"  style="display: none;" class="section-container">
       <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('why')">_</span></div>
       <h2 class="title"> why </h2>
       <br></br>
@@ -277,7 +282,7 @@
     <br>
     </div>
     <br>
-    <div id="howd" name="content" style="display: none;" class="section-container">
+    <div id="howd"  style="display: none;" class="section-container">
       <div style="text-align: right; margin-bottom: 0;"><span class="minimize"  onclick="add('how')">_</span></div>
       <h2 class="title"> how </h2>
       <div style="display: flex; flex-flow: row wrap; justify-content: space-around; margin: auto; max-width: 80%">
@@ -293,7 +298,7 @@
       </div>
     </div>
     <br>
-    <div id="resumed" name="content" style="visibility: hidden;" class="section-container">
+    <div id="resumed"  style="visibility: hidden;" class="section-container">
       <div style="text-align: right; margin-bottom: 1vh;"><span class="minimize"  onclick="add('resume')">_</span></div>
       <iframe id="pdf" src="vo_resume.pdf" height="500"></iframe>
     </div>

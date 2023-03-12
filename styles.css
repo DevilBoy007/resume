@@ -225,6 +225,29 @@ a:hover
   font-weight: bold;
 }
 
+.frame-wrapper
+{
+  position: relative;
+  margin: auto;
+  height: 480px;
+  width: 720px;
+  top: 0;
+  transform-origin: top right;
+  transform: scale(0.6);
+  right: -100px
+}
+/* .frame-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+.frame-wrapper>iframe
+{
+  border-radius:12px
+}
 /* social media icon stuff*/
 .fa {
   height: fit-content;

@@ -1,8 +1,8 @@
-var options = [false,false,false,false,false,false, false]
-var covers = [false,false, false, false, false]
+var options = [false,false,false,false,false,false, false] // who, what, where, when, why, how, resume
+var covers = [false,false, false, false, false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something 
 // var checker = arr => arr.every(v => v === false) // this is awesome
-var show = arr => arr.filter(x => x === true).length > 2 // trying the logic
-var contactInfo = { email: 'dylanbakr@gmail.com', text:'(815) 993-8931', mail:'1806 Woodlawn Avenue' }
+var show = arr => arr.filter(x => x === true).length > 2 // logic for showing the 'back to top' & 'close all' buttons
+var contactInfo = { email: 'dylanbakr@gmail.com', text:'+1 (815) 993-8931', mail:'1806 Woodlawn Avenue' }
 function updateContact(selected){
   switch (selected)
   {
@@ -229,7 +229,6 @@ function addInfo(cover){
       covers[0]=!covers[0]
       if(covers[0]){
         div.style.display='block'
-
       }
       else { document.getElementById('me').style.display = 'none'}
       break;
@@ -279,3 +278,5 @@ function closeAll() {
   }
   backToTop()
 }
+
+goToExternal = (location) => { window.open(location, '_blank') }
