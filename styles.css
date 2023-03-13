@@ -29,6 +29,12 @@ a:hover
 {
   text-decoration: underline;
 }
+.tiny
+{
+  font-size: 10px;
+  font-weight: bold;
+
+}
 #whop
 {
   padding-left: 5%;
