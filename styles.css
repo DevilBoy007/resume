@@ -227,6 +227,7 @@ a:hover
 
 .frame-wrapper
 {
+  display: inline-block;
   position: relative;
   margin: auto;
   height: 480px;
@@ -234,7 +235,7 @@ a:hover
   top: 0;
   transform-origin: top right;
   transform: scale(0.6);
-  right: -100px
+  right: -15vh
 }
 /* .frame-wrapper::after {
   content: '';
@@ -247,6 +248,14 @@ a:hover
 .frame-wrapper>iframe
 {
   border-radius:12px
+}
+
+.sideblock
+{
+  position: absolute;
+  margin-left: 2vw;
+  margin-right:0;
+  width: 25%;
 }
 /* social media icon stuff*/
 .fa {
