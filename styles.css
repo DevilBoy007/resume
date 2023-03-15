@@ -206,7 +206,7 @@ a:hover
   padding-top: 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.75);
   background-color: #303030;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .border-div
