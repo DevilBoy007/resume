@@ -70,7 +70,8 @@ a:hover
   color: rgb(139, 30, 30);
   cursor: cell;
 }
-#me, #this, #robotics, #webDev, #gameDev
+
+#me, #this, #robotics, #webDev, #gameDev, #uiux, #database
 {
   display: none;
 }

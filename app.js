@@ -1,5 +1,5 @@
 var options = [false,false,false,false,false,false, false] // who, what, where, when, why, how, resume
-var covers = [false,false, false, false, false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something 
+var covers = [false,false, false, false, false, false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something 
 // var checker = arr => arr.every(v => v === false) // this is awesome
 var show = arr => arr.filter(x => x === true).length > 2 // logic for showing the 'back to top' & 'close all' buttons
 var contactInfo = { email: 'dylanbakr@gmail.com', text:'+1 (815) 993-8931', mail:'1806 Woodlawn Avenue' }
@@ -263,6 +263,20 @@ function addInfo(cover){
       else { document.getElementById('robotics').style.display = 'none' }
       break;
     default:
+    case 'uiux':
+      covers[5] = !covers[5]
+      if (covers[5]) {
+        document.getElementById('uiux').style.display = 'block'
+      }
+      else { document.getElementById('uiux').style.display = 'none' }
+      break;
+    case 'database':
+      covers[6] = !covers[6]
+      if (covers[6]) {
+        document.getElementById('database').style.display = 'block'
+      }
+      else { document.getElementById('database').style.display = 'none' }
+      break;
   }
 }
 function backToTop() {
