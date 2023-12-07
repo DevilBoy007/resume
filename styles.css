@@ -33,11 +33,47 @@ a:hover
 {
   text-decoration: underline;
 }
+hr 
+{
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+hr:after 
+{
+  background: #b7ffb0;
+  content: 'Σ';
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
 .tiny
 {
   font-size: 10px;
   font-weight: bold;
 
+}
+#neighborfood
+{
+  font-family: 'Quicksand', sans-serif;
+  background-color: #b7ffb0;
+}
+#nf
+{
+  font-family: 'Titan One';
+}
+#timeline_ 
+{
+  margin-top: 10vh;
+  display: inline-block;
+}
+#main-container 
+{
+  text-align: center;
+  padding: 2vw;
 }
 #whop
 {
@@ -71,7 +107,7 @@ a:hover
   cursor: cell;
 }
 
-#me, #this, #robotics, #webDev, #gameDev, #uiux, #database
+#me, #this, #robotics, #webDev, #gameDev, #uiux, #database, #coming-soon
 {
   display: none;
 }
