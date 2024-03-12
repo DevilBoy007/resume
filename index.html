@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0", charset="utf8">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titan+One">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,6 +28,7 @@
             <button id="why" class="select-button border-gradient border-gradient-purple" onclick="add('why')">W H Y</button>
             <button id="how" class="select-button border-gradient border-gradient-purple" onclick="add('how')">H O W</button>
             <button id="resume" class="select-button border-gradient border-gradient-purple" onclick="add('resume')">RESUME</button>
+
           </div>
           <br></br>
         </div>
@@ -47,7 +47,7 @@
             my name is <span class="tooltip" style="color:orangered">Dylan Bakr.<span class="tooltiptext">{
               <br>
               name:&emsp;<span style="color: #0bf800"> 'dylan'</span><br>
-              age:&emsp;<span style="color: #0bf800">23</span><br>
+              age:&emsp;<span style="color: #0bf800">24</span><br>
               height:&emsp;<span style="color: #0bf800">6'0"</span><br>
               likes:&emsp;<span style="color: #0bf800"> 'making things happen'</span><br>
             }</span></span>
@@ -229,10 +229,10 @@
           <span style="color: black; font-weight: bold;">currently located:</span>Indianapolis, Indiana USA
         </div>
         <div class="mini-section-container" style="text-align: right;">
-          <span style="color: black; font-weight: bold;">willing to relocate?</span>y e s
+          <span style="color: black; font-weight: bold;">willing to relocate?</span>n o
         </div>
         <div class="mini-section-container">
-          <span style="color: black; font-weight: bold;">current employment:</span>Milliman, Indianapolis, IN USA
+          <span style="color: black; font-weight: bold;">current employment:</span>Milliman<br>Indianapolis, IN USA
         </div>
         <div class="mini-section-container">
           <span style="color: black; font-weight: bold;">education:</span>Butler University, Indianapolis, IN USA
@@ -302,7 +302,7 @@
               i believe that software can help society rapidly progress towards a better, cleaner future.<br>i believe many <span class="tooltip">menial tasks<span class="tooltiptext">
                 transportation<br>
                 fast food<br>
-                waste management<br>
+                waste-management<br>
                 maintainence<br>
                 agriculture<br>
                 distribution<br>
@@ -316,7 +316,7 @@
           <br></br>
           <div class="static-div">
             <p class="whyp">
-              too much of our time is wasted as a society. by automating all processes involved in human continuation, people will be able to live free;<br>by allowing people to live free, imagination and inspiration may have a chance to take hold and drive them to create the change we so desperately need in this world
+              too much of our time is wasted as a society. by automating the vital processes involved in human sustainment, people will be able to live free;<br>by allowing people to live free, imagination and inspiration may have a chance to take hold and drive them to create the change we so desperately need in this world
             </p>
           </div>
         </div>
@@ -351,13 +351,7 @@
         <br></br>
         <div class="static-div">
           <p class="whyp">
-            first generation of this site (1.0.0) has been built using vanilla HTML/CSS/JS.<br>i intend to, once the content portion is complete, implement this same page using a frontend framework-- either Angular, Vue, or React.
-          </p>
-        </div>
-        <br></br>
-        <div class="static-div" style="padding-right: 2vw;">
-          <p class="whyp">
-            server side scripting will be handled most likely by using FLASK (python), but may be an Express.js deployment instead. we will weigh those benefits at a later time when it is more relevant.
+            This site is build with vanilla Javascript. No frameworks involved. Just good, old-fashioned code.
           </p>
         </div>
         <br></br>
@@ -371,19 +365,19 @@
       <h2 class="title"> how </h2>
       <div style="display: flex; flex-flow: row wrap; justify-content: space-around; margin: auto; max-width: 80%">
         <div class="mini-section-container">
-          <span style="color: black; font-weight: bold;">web automation:</span>Python Selenium
+          <span style="color: black; font-weight: bold;">web automation:</span> - Selenium<br> - BeautifulSoup
         </div>
         <div class="mini-section-container">
-          <span style="color: black; font-weight: bold;">deployment stack:</span> - Cloud<br> - Express<br> - Svelte<br> - Node
+          <span style="color: black; font-weight: bold;">web deployment stack:</span> - SQLite<br> - Express<br> - Svelte<br> - Node
         </div>
         <div class="mini-section-container">
-          <span style="color: black; font-weight: bold;">static file serving</span> - Python FLASK<br> - Express.js
+          <span style="color: black; font-weight: bold;">static file serving</span> - FLASK<br> - Express.js
         </div>
         <div class="mini-section-container">
-          <span style="color: black; font-weight: bold;">data:</span> - APIs<br> - Databases (RDBMS)<br> - Charts.js<br> - R<br> - NumPy<br> - Trees 
+          <span style="color: black; font-weight: bold;">data:</span> - API integrations<br> - Databases (Relational Paradigm)<br> - Charts.js<br> - R<br> - Trees<br> - JSON
         </div>
         <div class="mini-section-container">
-          <span style="color: black; font-weight: bold;">process automation / scripting:</span>Python<br> - Shell scripts
+          <span style="color: black; font-weight: bold;">process automation / scripting:</span>- Python<br> - VBA<br> - Power Fx<br> - Shell scripts (Bash, PowerShell)
         </div>
         <div class="mini-section-container">
           <span style="color: black; font-weight: bold;">OOP:</span> - Java<br> - C++<br> - Python<br> - C#
@@ -397,6 +391,30 @@
     <div id="resumed"  style="visibility: hidden;" class="section-container">
       <div style="text-align: right; margin-bottom: 1vh;"><span class="minimize"  onclick="add('resume')">_</span></div>
       <iframe id="pdf" src="vo_resume.pdf" height="500"></iframe>
+    </div>
+    <div id="extrasd" style="flex-flow: column wrap;" class="section-container">
+      <div style="text-align: right; margin-bottom: 0;"><span class="minimize" onclick="add('extras')">_</span></div>
+      <h2 class="title"> extras </h2>
+      <div class="section-container cover" onclick="addInfo('hex colors')">hex colors</div>
+      <div id="hexColors" class="border-div">
+        <div>
+          <div class="static-div">
+            <p class="whyp">
+              hex colors are a hexadecimal representation of a color.<br><br>they are used in web development (and other places) to define the color of an element.<br><br>the format is a 6-digit string that represents the red, green, and blue values of the color.<br>the first two digits represent the red value, the second two represent the green value, and the last two represent the blue value.<br>the values range from 0 to 255 and are represented as base 16 [10<sub>16</sub>] numbers.
+            </p>
+            <img src="./img/hex-reading.png" alt="hex color reading" class="inline-image"/>
+          </div>
+          <div class="static-div">
+            <p class="whyp">
+              <input type="color" id="color" style="width: 10vh; height:10vh;" value="#00bf9f" onchange="console.log(this.value)"/>
+              <div class="color-wrapper">
+                <div id="colorRed" style="background-color: #000000; width: 8vh; height: 8vh;"><input id="inputRed" class="color-picker" type=number min="0" max="255" step="1" value="0"/></div>
+                <div id="colorGreen" style="background-color: #00bf00; width: 8vh; height: 8vh;"><input id="inputGreen" class="color-picker" type=number min="0" max="255" step="1" value="191"/></div>
+                <div id="colorBlue" style="background-color: #00009f; width: 8vh; height: 8vh;"><input id="inputBlue" class="color-picker" type=number min="0" max="255" step="1" value="159"/></div>
+              </div>
+            </p>
+          </div>
+      </div>
     </div>
     <br>
     <div style="display: flex; flex-flow: row wrap" class="button-container">

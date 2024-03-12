@@ -180,6 +180,33 @@ hr:after
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
 }
 
+.color-picker
+{
+  position: relative;
+  width: 5vh;
+  height: 4vh;
+  margin: 50%;
+  font-size:1.5vh
+}
+.color-wrapper
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1vh;
+}
+.inline-image
+{
+  display: block;
+  margin: 1vh;
+  float: right;
+  width: 33vw;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+  transition-property: all;
+  transition-duration: .5s;
+}
 .border-gradient {
   border-image-slice: 1;
   border-width: 3px;

@@ -299,5 +299,25 @@ function closeAll() {
   }
   backToTop()
 }
-
+// rig up event listeners for the number inputs
+addEventListener('load', () => {
+  document.getElementById('inputRed').addEventListener('input', (event) => {
+    console.log("red:", event.target.value)
+    parseInt(event.target.value) > 255 ? event.target.value = 255 : parseInt(event.target.value) < 0 ? event.target.value = 0 : event.target.value = event.target.value
+    document.getElementById('colorRed').style.backgroundColor = `#${parseInt(event.target.value, 16)}0000`
+   // document.documentElement.style.setProperty("--color-red",`#${parseInt(event.target.value, 16)}0000`)
+  })
+  document.getElementById('inputGreen').addEventListener('input', (event) => {
+    console.log("green:", event.target.value)
+    parseInt(event.target.value) > 255 ? event.target.value = 255 : parseInt(event.target.value) < 0 ? event.target.value = 0 : event.target.value = event.target.value
+    document.getElementById('colorGreen').style.backgroundColor = `#00${parseInt(event.target.value, 16)}00`
+    // document.documentElement.style.setProperty("--color-green",`#00${parseInt(event.target.value, 16)}00`)
+  })
+  document.getElementById('inputBlue').addEventListener('input', (event) => {
+    console.log("blue:", event.target.value)
+    parseInt(event.target.value) > 255 ? event.target.value = 255 : parseInt(event.target.value) < 0 ? event.target.value = 0 : event.target.value = event.target.value
+    document.getElementById('colorBlue').style.backgroundColor = `#0000${parseInt(event.target.value, 16)}`
+    // document.documentElement.style.setProperty("--color-blue",`#0000${parseInt(event.target.value, 16)}`)
+  })
+})
 goToExternal = (location) => { window.open(location, '_blank') }
