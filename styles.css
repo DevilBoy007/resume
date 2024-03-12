@@ -5,9 +5,10 @@
   --color-red: #000000;
   --color-green: #00bf00;
   --color-blue: #00009f;
+  --rgb: #00bf9f;
   --gradient:
-  linear-gradient(-45deg, #35C3F3 0%, var(--color-red) 20%, 
-  #8b9fe8 39%, var(--color-blue) 76%, 
+  linear-gradient(-45deg, var(--rgb) 0%, var(--color-red) 20%, 
+  var(--rgb) 39%, var(--color-blue) 76%, 
   var(--color-green) 100%);
 }
 

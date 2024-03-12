@@ -304,21 +304,25 @@ addEventListener('load', () => {
   document.getElementById('inputRed').addEventListener('input', (event) => {
     console.log("red:", event.target.value, Number(event.target.value).toString(16).padStart(2, '0'))
     parseInt(event.target.value) > 255 ? event.target.value = 255 : parseInt(event.target.value) < 0 ? event.target.value = 0 : event.target.value = event.target.value
-    document.getElementById('colorRed').style.backgroundColor = `#${Number(event.target.value).toString(16).padStart(2,'0')}0000`
-    document.documentElement.style.setProperty("--color-red",`#${Number(event.target.value).toString(16).padStart(2,'0')}0000`)
+    recolor('red', event.target.value)
   })
   document.getElementById('inputGreen').addEventListener('input', (event) => {
     console.log("green:", event.target.value, parseInt(event.target.value).toString(16))
     parseInt(event.target.value) > 255 ? event.target.value = 255 : parseInt(event.target.value) < 0 ? event.target.value = 0 : event.target.value = event.target.value
-    document.getElementById('colorGreen').style.backgroundColor = `#00${Number(event.target.value).toString(16).padStart(2,'0')}00`
-    document.documentElement.style.setProperty("--color-green",`#00${Number(event.target.value).toString(16).padStart(2,'0')}00`)
-
+    recolor('green', event.target.value)
   })
   document.getElementById('inputBlue').addEventListener('input', (event) => {
     console.log("blue:", event.target.value, parseInt(event.target.value).toString(16))
     parseInt(event.target.value) > 255 ? event.target.value = 255 : parseInt(event.target.value) < 0 ? event.target.value = 0 : event.target.value = event.target.value
-    document.getElementById('colorBlue').style.backgroundColor = `#0000${Number(event.target.value).toString(16).padStart(2, '0')}`
-    document.documentElement.style.setProperty("--color-blue",`#0000${Number(event.target.value).toString(16).padStart(2, '0')}`)
+    recolor('blue', event.target.value)
   })
 })
 goToExternal = (location) => { window.open(location, '_blank') }
+recolor = (flavor, val) => {
+  document.getElementById(`color-${flavor}`).style.backgroundColor = flavor == 'red' ? `#${toHex(val)}0000` : flavor == 'green' ? `#00${toHex(val)}00` : `#0000${toHex(val)}`
+  document.documentElement.style.setProperty(`--color-${flavor}`, flavor == 'red' ? `#${toHex(val)}0000` : flavor == 'green' ? `#00${toHex(val)}00` : `#0000${toHex(val)}`)
+  // change css variable --rgb to the new color value
+  document.querySelector('#color').value = `#${toHex(document.getElementById('inputRed').value)}${toHex(document.getElementById('inputGreen').value)}${toHex(document.getElementById('inputBlue').value)}`
+  document.documentElement.style.setProperty('--rgb', document.querySelector('#color').value)
+}
+toHex = (dec) => { return Number(dec).toString(16).padStart(2, '0') }
