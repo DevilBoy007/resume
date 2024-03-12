@@ -1,4 +1,4 @@
-var options = [false,false,false,false,false,false, false] // who, what, where, when, why, how, resume
+var options = [false,false,false,false,false,false, false, false] // who, what, where, when, why, how, resume, extras
 var covers = [false,false, false, false, false, false, false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something 
 // var checker = arr => arr.every(v => v === false) // this is awesome
 var show = arr => arr.filter(x => x === true).length > 2 // logic for showing the 'back to top' & 'close all' buttons
@@ -217,6 +217,33 @@ var add = (pane) => {
         document.getElementById('close').style.visibility='hidden'
       }
       break
+    case 'extras':
+      var div = document.getElementById('extrasd')
+      var button = document.getElementById('extras')
+      options[7]=!options[7]
+      if(options[7])
+      {
+        button.classList.add('button-selected')
+        div.style.display = 'block'
+        div.scrollIntoView('smooth')
+        window.scrollBy(0,-90)
+      }
+      if(!options[7])
+      {
+        button.classList.remove('button-selected')
+        div.style.display = 'none'
+      }
+      if(show(options))
+      {
+        document.getElementById('top').style.visibility='visible';
+        document.getElementById('close').style.visibility='visible'
+      }
+      else
+      {
+        document.getElementById('top').style.visibility='hidden';
+        document.getElementById('close').style.visibility='hidden'
+      }
+      break
     default:
       break;
   }
@@ -283,6 +310,13 @@ function addInfo(cover){
         document.getElementById('coming-soon').style.display = 'block'
       }
       else { document.getElementById('coming-soon').style.display = 'none' }
+      break;
+    case 'hex colors':
+      covers[8] = !covers[8]
+      if (covers[8]) {
+        document.getElementById('hexColors').style.display = 'block'
+      }
+      else { document.getElementById('hexColors').style.display = 'none' }
       break;
   }
 }
