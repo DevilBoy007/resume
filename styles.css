@@ -1,5 +1,15 @@
 /*@import url('../node_modules/font-awesome/css/font-awesome.min.css');
 */
+:root
+{
+  --color-red: #000000;
+  --color-green: #00bf00;
+  --color-blue: #00009f;
+  --gradient:
+  linear-gradient(-45deg, #35C3F3 0%, var(--color-red) 20%, 
+  #8b9fe8 39%, var(--color-blue) 76%, 
+  var(--color-green) 100%);
+}
 
 *::-webkit-scrollbar {
   display: none;
@@ -179,7 +189,10 @@ hr:after
   color: orchid;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
 }
-
+.gradient
+{
+  background: var(--gradient);
+}
 .color-picker
 {
   position: relative;
