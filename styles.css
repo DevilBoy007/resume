@@ -329,7 +329,7 @@ hr:after
   margin-top:2vh; margin-bottom: 3vh;
   border-radius: 12px;
   background: rgb(111,8,171);
-  background: linear-gradient(300deg, #ffffff 0%, #00bf9f 33%,#ffffff 66%, #00bf9f 99%);
+  background: linear-gradient(300deg, #000 0%, #00bf9f 33%,#000 66%, #00bf9f 99%);
   padding: 2px;
 }
 .border-div>div
