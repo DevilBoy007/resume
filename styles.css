@@ -118,7 +118,7 @@ hr:after
   cursor: cell;
 }
 
-#me, #this, #robotics, #webDev, #gameDev, #uiux, #database, #coming-soon, #hexColors
+#me, #this, #robotics, #webDev, #gameDev, #uiux, #database, #coming-soon, #hexColors, #quotes
 {
   display: none;
 }
@@ -135,7 +135,7 @@ hr:after
 .select-button:hover
 {
   padding: .5rem 1rem;
-  color: orchid;
+  color: #00bf9f;
   text-shadow: .5px .5px black;
   font-size: 18px;
   background: black;
@@ -175,14 +175,18 @@ hr:after
 {
   visibility: hidden;
   z-index: 99;
-  border: none;
+  border: 1px solid #00bf9f;
   outline: none;
-  background-color: orchid;
+  background-color: transparent;
   color: black;
   cursor: cell;
   padding-left:1%;padding-right:1%;
-  border-radius:3px;
-  font-size: 18px;
+  border-radius:50%;
+  font-size: 2vh;
+  height: 6vh;
+  width: 6vh;
+  margin: 1vh;
+
 }
 .bottom-button:hover
 {
@@ -209,6 +213,12 @@ hr:after
   justify-content: space-around;
   padding: 1vh;
 }
+.static-div.quotes
+{
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
 .inline-image
 {
   display: block;
@@ -228,6 +238,9 @@ hr:after
 .border-gradient-purple {
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
+.border-gradient-green {
+  border-image-source: linear-gradient(to left, #000, #00bf9f);
+}
 .static-div
 {
   box-shadow: 1px 3px 6px 0 rgba(0,0,0,.5);
@@ -236,10 +249,26 @@ hr:after
   margin: 3vh;
   transition-property: margin;
   transition-duration: .3s;
-  min-width: 60vw;
+  min-width: 33vw;
   min-height: 20vh;
   text-align: justify;
   overflow: auto;
+}
+.flex-wrapper
+{
+  display: flex; 
+  flex-flow: row nowrap; 
+  justify-content: space-between; 
+  margin: auto;
+  max-height: 60%;
+}
+.flex-wrapper>div
+{
+  display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 75%;
 }
 .dynadiv
 {
@@ -266,10 +295,14 @@ hr:after
   border-radius: 15px;
   height: fit-content;
   width: fit-content;
-  margin: 2vh;
+  margin: 1vh;
   padding: 3vh;
   transition-property: margin;
   transition-duration: .3s;
+}
+.mini-section-container.static-div.quotes
+{
+  width: 50%
 }
 .mini-section-container:hover
 {
@@ -296,7 +329,7 @@ hr:after
   margin-top:2vh; margin-bottom: 3vh;
   border-radius: 12px;
   background: rgb(111,8,171);
-  background: linear-gradient(300deg, #ffffff 0%, #DA70D6 33%,#ffffff 66%, #DA70D6 99%);
+  background: linear-gradient(300deg, #ffffff 0%, #00bf9f 33%,#ffffff 66%, #00bf9f 99%);
   padding: 2px;
 }
 .border-div>div

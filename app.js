@@ -1,5 +1,6 @@
 var options = [false,false,false,false,false,false, false, false] // who, what, where, when, why, how, resume, extras
-var covers = [false,false, false, false, false, false, false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something 
+var covers = [false,false, false, false, false, false, false, false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something
+// hindsight 2024, this should have been an object with keys and values
 // var checker = arr => arr.every(v => v === false) // this is awesome
 var show = arr => arr.filter(x => x === true).length > 2 // logic for showing the 'back to top' & 'close all' buttons
 var contactInfo = { email: 'dylanbakr@gmail.com', text:'+1 (815) 993-8931', mail:'1806 Woodlawn Avenue' }
@@ -317,6 +318,13 @@ function addInfo(cover){
         document.getElementById('hexColors').style.display = 'block'
       }
       else { document.getElementById('hexColors').style.display = 'none' }
+      break;
+    case 'quotes':
+      covers[9] = !covers[9]
+      if (covers[9]) {
+        document.getElementById('quotes').style.display = 'block'
+      }
+      else { document.getElementById('quotes').style.display = 'none' }
       break;
   }
 }
