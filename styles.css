@@ -118,7 +118,7 @@ hr:after
   cursor: cell;
 }
 
-#me, #this, #robotics, #webDev, #gameDev, #uiux, #database, #coming-soon, #hexColors, #quotes
+#me, #this, #robotics, #webDev, #gameDev, #uiux, #database, #coming-soon, #hexColors, #quotes, #space
 {
   display: none;
 }
@@ -451,11 +451,34 @@ hr:after
   left: 105%;
   box-shadow: 0 1px 2px 0 rgba(255,255,255,.75)
 }
-
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
 /* end tooltip stuff */
+.flex-wrap
+{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  padding: 1vh;
+  overflow: auto;
+}
+.flex-nowrap
+{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  padding: 1vh;
+  overflow: auto;
+}
+.flex-nowrap>div
+{
+  justify-content: flex-end;
+}
 .cover
 {
   background-color: deepskyblue;
@@ -471,4 +494,8 @@ hr:after
   background-color: rgba(0, 0, 0, 0.666);
   -webkit-transform: scale(1.5);
   cursor: cell;
+}
+.scroll
+{
+  padding-left: 25vw;
 }

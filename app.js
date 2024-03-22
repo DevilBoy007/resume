@@ -1,5 +1,5 @@
 var options = [false,false,false,false,false,false, false, false] // who, what, where, when, why, how, resume, extras
-var covers = [false,false, false, false, false, false, false, false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something
+var covers = [false,false, false, false, false, false, false, false,false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something
 // hindsight 2024, this should have been an object with keys and values
 // var checker = arr => arr.every(v => v === false) // this is awesome
 var show = arr => arr.filter(x => x === true).length > 2 // logic for showing the 'back to top' & 'close all' buttons
@@ -325,6 +325,13 @@ function addInfo(cover){
         document.getElementById('quotes').style.display = 'block'
       }
       else { document.getElementById('quotes').style.display = 'none' }
+      break;
+    case 'space':
+      covers[10] = !covers[10]
+      if (covers[10]) {
+        document.getElementById('space').style.display = 'block'
+      }
+      else { document.getElementById('space').style.display = 'none' }
       break;
   }
 }
