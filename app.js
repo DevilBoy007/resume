@@ -1,6 +1,18 @@
 var options = [false,false,false,false,false,false, false, false] // who, what, where, when, why, how, resume, extras
 var covers = [false,false, false, false, false, false, false, false,false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something
 // hindsight 2024, this should have been an object with keys and values
+var discrete_waveform = [1,0,0,1,1,0,0,1] // this is the array that will hold the discrete waveform converted from text to binary
+const binary_data = {
+  datasets: [
+    {
+      label: 'clock',
+      data: discrete_waveform,
+      borderColor: '#000000',
+      fill: false,
+      stepped: true,
+    }
+  ]
+};
 // var checker = arr => arr.every(v => v === false) // this is awesome
 var show = arr => arr.filter(x => x === true).length > 2 // logic for showing the 'back to top' & 'close all' buttons
 var contactInfo = { email: 'dylanbakr@gmail.com', text:'+1 (815) 993-8931', mail:'1806 Woodlawn Avenue' }
@@ -26,7 +38,7 @@ function updateContact(selected){
   }
 }
 
-var add = (pane) => {
+add = (pane) => {
   switch (pane) {
     case 'who':
       var div = document.getElementById('whod')
@@ -365,6 +377,17 @@ addEventListener('load', () => {
     parseInt(event.target.value) > 255 ? event.target.value = 255 : parseInt(event.target.value) < 0 ? event.target.value = 0 : event.target.value = event.target.value
     recolor('blue', event.target.value)
   })
+  document.getElementById('binaryInput').addEventListener('keydown', (event) => {
+    console.log(event.key, `b: ${char2Binary(event.key)}`)
+    let b = char2Binary(event.key)
+    for (let c of b)
+    {
+      discrete_waveform.push(c)
+    }
+    console.log(discrete_waveform)
+    binary_data.datasets.data=discrete_waveform
+    console.log("staged data: ",binary_data.datasets.data)
+  })
 })
 goToExternal = (location) => { window.open(location, '_blank') }
 recolor = (flavor, val) => {
@@ -375,3 +398,13 @@ recolor = (flavor, val) => {
   document.documentElement.style.setProperty('--rgb', document.querySelector('#color').value)
 }
 toHex = (dec) => { return Number(dec).toString(16).padStart(2, '0') }
+
+text2Binary = (string) => {
+  return string.split('').map(function (c) {
+    char2Binary(c)
+  }).join(' ');
+}
+
+char2Binary = (char) => {
+  return char.charCodeAt(0).toString(2)
+}
