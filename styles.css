@@ -509,10 +509,14 @@ hr:after
   font-family: Quicksand, sans-serif;
   background: #000;
   border: 0;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem;
   box-shadow: inset 5px 5px 3px #d2d5d6, inset -5px -5px 3px #ffffff;
   color: #0bf800;
   padding: 1rem;
   height: 9rem;
   width: 9rem;
+}
+.chart-container
+{
+  width: 600px;
 }

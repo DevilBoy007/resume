@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titan+One">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+      integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://d3js.org/d3.v2.min.js"></script>
     <script src="./src/timeknots-min.js"></script>
 
@@ -443,6 +446,23 @@
                   i have not failed.<br> i've just found 10,000 ways that won't work<span
                     style="color: black; font-weight: bold;">thomas edison</span>
                 </div>
+                <div class="mini-section-container">
+                  when you learn, teach<br> when you get, give<span
+                    style="color: black; font-weight: bold;">maya angelou</span>
+                </div>
+                <div class="mini-section-container">
+                  how long should you try?<br> until.<span
+                    style="color: black; font-weight: bold;">john rohn</span>
+                </div>
+              </div>
+              <div>
+                <div class="mini-section-container">
+                  the value of an idea lies in the using of it<span
+                    style="color: black; font-weight: bold;">thomas edison</span>
+                </div>
+                <div class="mini-section-container">
+                  do or do not<br> there is no try<span style="color: black; font-weight: bold;">yoda</span>
+                </div>
               </div>
             </div>
           </div>
@@ -498,33 +518,6 @@
           <textarea id="binaryInput" class="binary-input" placeholder="type here..." ></textarea>
           <div class="chart-container">
             <canvas id="chart"></canvas>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.0/chart.min.js" type="module">
-              (async function () {
-                console.log('drawing canvas...')
-                const d = [{ 0: 1, 1: 0, 2: 0, 3: 1, 4: 1, 5: 0, 6: 0, 7: 1 }]
-                new Chart(document.getElementById('chart').getContext('2d'), {
-                  type: 'line',
-                  data: {
-                    datasets: [{
-                      data: d
-                    }]
-                  },
-                  options: {
-                    responsive: true,
-                    interaction: {
-                      intersect: false,
-                      axis: 'x'
-                    },
-                    plugins: {
-                      title: {
-                        display: true,
-                        text: (ctx) => 'cpu input',
-                      }
-                    }
-                  }
-                }).draw()
-              });
-          </script>
           </div>
         </div>
       </div>
