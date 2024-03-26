@@ -1,21 +1,53 @@
 var options = [false,false,false,false,false,false, false, false] // who, what, where, when, why, how, resume, extras
 var covers = [false,false, false, false, false, false, false, false,false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something
 // hindsight 2024, this should have been an object with keys and values
-var discrete_waveform = [1,0,0,1,1,0,0,1] // this is the array that will hold the discrete waveform converted from text to binary
-const binary_data = {
-  datasets: [
-    {
-      label: 'clock',
-      data: discrete_waveform,
-      borderColor: '#000000',
-      fill: false,
-      stepped: true,
+
+const discrete_waveform = [
+  { x: 0, y: 1 },
+  { x: 1, y: 0 },
+  { x: 2, y: 0 },
+  { x: 3, y: 1 },
+  { x: 4, y: 1 },
+  { x: 5, y: 0 },
+  { x: 6, y: 0 },
+  { x: 7, y: 1 }
+];
+
+const config = {
+  type: 'line',
+  data: {
+    labels: discrete_waveform.map(row => row.x),
+    datasets: [
+      {
+        label: 'input value',
+        data: discrete_waveform.map(row => row.y),
+        borderColor: '#000',
+        fill: false,
+        stepped: true,
+      }
+    ]
+  },
+  options: {
+    responsiveness: true,
+    interaction: {
+      intersect: false,
+      axis: 'x'
+    },
+    plugins: {
+      title: {
+        display: true,
+        text: 'discrete waveform'
+      }
     }
-  ]
-};
+  }
+}
 // var checker = arr => arr.every(v => v === false) // this is awesome
 var show = arr => arr.filter(x => x === true).length > 2 // logic for showing the 'back to top' & 'close all' buttons
 var contactInfo = { email: 'dylanbakr@gmail.com', text:'+1 (815) 993-8931', mail:'1806 Woodlawn Avenue' }
+
+
+
+
 function updateContact(selected){
   switch (selected)
   {
@@ -362,6 +394,10 @@ function closeAll() {
 }
 // rig up event listeners for the number inputs
 addEventListener('load', () => {
+  const ctx = document.getElementById('chart')
+  console.log('chart: ', ctx)
+  const myChart = new Chart(ctx, config);
+
   document.getElementById('inputRed').addEventListener('input', (event) => {
     console.log("red:", event.target.value, Number(event.target.value).toString(16).padStart(2, '0'))
     parseInt(event.target.value) > 255 ? event.target.value = 255 : parseInt(event.target.value) < 0 ? event.target.value = 0 : event.target.value = event.target.value
@@ -382,11 +418,10 @@ addEventListener('load', () => {
     let b = char2Binary(event.key)
     for (let c of b)
     {
-      discrete_waveform.push(c)
+      discrete_waveform.push(discrete_waveform.length, parseInt(c))
     }
-    console.log(discrete_waveform)
-    binary_data.datasets.data=discrete_waveform
-    console.log("staged data: ",binary_data.datasets.data)
+    console.log("staged data: ",discrete_waveform)
+    //myChart.update()
   })
 })
 goToExternal = (location) => { window.open(location, '_blank') }
