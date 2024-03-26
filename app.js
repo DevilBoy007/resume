@@ -24,7 +24,7 @@ const discrete_waveform = [
 const config = {
   type: 'line',
   data: {
-    labels: discrete_waveform.map(row => row.x),
+    labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
     datasets: [
       {
         label: 'input value',
@@ -43,14 +43,19 @@ const config = {
     },
     scales: {
       x: {
+        grid : {
+          color: "#fff"
+        },
         ticks:
         {
-          color: '#000',
+          color: '#000'
         }
       },
       y: {
         ticks: {
-          color: '#000'
+          color: '#000',
+          sampleSize: 2,
+          maxTicksLimit: 2
         }
       }
     },
@@ -450,7 +455,6 @@ addEventListener('load', () => {
       discrete_waveform.shift()
     }
     console.log("staged data: ",discrete_waveform)
-    myChart.data.labels = discrete_waveform.map(row => row.x)
     myChart.data.datasets[0].data = discrete_waveform.map(row => row.y)
     myChart.update()
   })
