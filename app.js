@@ -33,6 +33,19 @@ const config = {
       intersect: false,
       axis: 'x'
     },
+    scales: {
+      x: {
+        ticks:
+        {
+          color: '#000',
+        }
+      },
+      y: {
+        ticks: {
+          color: '#000'
+        }
+      }
+    },
     plugins: {
       title: {
         display: true,
