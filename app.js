@@ -24,7 +24,7 @@ const discrete_waveform = [
 const config = {
   type: 'line',
   data: {
-    labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
     datasets: [
       {
         label: 'input value',
@@ -476,5 +476,6 @@ text2Binary = (string) => {
 }
 
 char2Binary = (char) => {
-  return char.charCodeAt(0).toString(2)
+  let a = char.charCodeAt(0).toString(2)
+  return new Array(9 - a.length).join('0') + a;
 }
