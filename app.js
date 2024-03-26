@@ -1,7 +1,7 @@
 var options = [false,false,false,false,false,false, false, false] // who, what, where, when, why, how, resume, extras
 var covers = [false,false, false, false, false, false, false, false,false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something
 // hindsight 2024, this should have been an object with keys and values
-
+var myChart = null
 const discrete_waveform = [
   { x: 0, y: 1 },
   { x: 1, y: 0 },
@@ -396,7 +396,7 @@ function closeAll() {
 addEventListener('load', () => {
   const ctx = document.getElementById('chart')
   console.log('chart: ', ctx)
-  const myChart = new Chart(ctx, config);
+  myChart = new Chart(ctx, config);
 
   document.getElementById('inputRed').addEventListener('input', (event) => {
     console.log("red:", event.target.value, Number(event.target.value).toString(16).padStart(2, '0'))
@@ -421,7 +421,9 @@ addEventListener('load', () => {
       discrete_waveform.push({x:discrete_waveform.length, y: parseInt(c)})
     }
     console.log("staged data: ",discrete_waveform)
-    //myChart.update()
+    myChart.data.labels = discrete_waveform.map(row => row.x)
+    myChart.data.datasets[0].data = discrete_waveform.map(row => row.y)
+    myChart.update()
   })
 })
 goToExternal = (location) => { window.open(location, '_blank') }
