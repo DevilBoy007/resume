@@ -1,16 +1,24 @@
 var options = [false,false,false,false,false,false, false, false] // who, what, where, when, why, how, resume, extras
-var covers = [false,false, false, false, false, false, false, false,false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something
+var covers = [false,false, false, false, false, false, false, false,false, false, false] // child options ... hindsight 2023 this should have been named childOptions or subOptions or something
 // hindsight 2024, this should have been an object with keys and values
 var myChart = null
 const discrete_waveform = [
   { x: 0, y: 1 },
   { x: 1, y: 0 },
-  { x: 2, y: 0 },
-  { x: 3, y: 1 },
+  { x: 2, y: 1 },
+  { x: 3, y: 0 },
   { x: 4, y: 1 },
   { x: 5, y: 0 },
-  { x: 6, y: 0 },
-  { x: 7, y: 1 }
+  { x: 6, y: 1 },
+  { x: 7, y: 0 },
+  { x: 8, y: 1 },
+  { x: 9, y: 0 },
+  { x: 10, y: 1 },
+  { x: 11, y: 0 },
+  { x: 12, y: 1 },
+  { x: 13, y: 0 },
+  { x: 14, y: 1 },
+  { x: 15, y:0 }
 ];
 
 const config = {
@@ -389,6 +397,13 @@ function addInfo(cover){
         document.getElementById('space').style.display = 'block'
       }
       else { document.getElementById('space').style.display = 'none' }
+      break;
+    case 'binary':
+      covers[11] = !covers[11]
+      if (covers[11]) {
+        document.getElementById('binary').style.display = 'block'
+      }
+      else { document.getElementById('binary').style.display = 'none' }
       break;
   }
 }
