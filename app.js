@@ -418,7 +418,7 @@ addEventListener('load', () => {
     let b = char2Binary(event.key)
     for (let c of b)
     {
-      discrete_waveform.push(discrete_waveform.length, parseInt(c))
+      discrete_waveform.push({x:discrete_waveform.length, y: parseInt(c)})
     }
     console.log("staged data: ",discrete_waveform)
     //myChart.update()
