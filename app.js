@@ -419,6 +419,7 @@ addEventListener('load', () => {
     for (let c of b)
     {
       discrete_waveform.push({x:discrete_waveform.length, y: parseInt(c)})
+      discrete_waveform.shift()
     }
     console.log("staged data: ",discrete_waveform)
     myChart.data.labels = discrete_waveform.map(row => row.x)
