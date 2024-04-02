@@ -263,7 +263,6 @@ add = (pane) => {
     case 'resume':
       var div = document.getElementById('resumed')
       var button = document.getElementById('resume')
-      var doc = document.getElementById('pdf')
       options[6]=!options[6]
       if(options[6])
       {
