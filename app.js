@@ -69,7 +69,7 @@ const config = {
 }
 // var checker = arr => arr.every(v => v === false) // this is awesome
 var show = arr => arr.filter(x => x === true).length > 2 // logic for showing the 'back to top' & 'close all' buttons
-var contactInfo = { email: 'dylanbakr@gmail.com', text:'+1 (815) 993-8931', mail:'1806 Woodlawn Avenue' }
+var contactInfo = { email: 'dylan@bakr.dev', text:'+1 (815) 993-8931', mail:'2917 Ruckle Street' }
 
 
 
@@ -89,7 +89,6 @@ function updateContact(selected){
       break;
     case 'mail':
       console.log('mail')
-      document.getElementById('contact').href = 'https://goo.gl/maps/8GrA8GrprMHgGwrm6'
       document.getElementById('contact').innerHTML = contactInfo.mail
       break;
     default:
